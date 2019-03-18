@@ -5,6 +5,7 @@
     <string name="account_type_mastodon">Mastodon</string>
     <string name="account_type_statusnet">StatusNet</string>
     <string name="account_type_twitter">Twitter</string>
+    <string name="antiBot_preferences_name">abtpref</string>
 
     <!-- [verb] Accept a friend request (follow request) -->
     <string name="action_accept_friend_request">Accept</string>

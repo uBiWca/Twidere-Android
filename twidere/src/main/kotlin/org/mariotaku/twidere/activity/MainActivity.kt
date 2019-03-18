@@ -31,9 +31,13 @@ import android.os.Looper
 import android.support.annotation.StyleRes
 import android.support.v4.view.ViewCompat
 import android.support.v7.app.TwilightManagerAccessor
+import android.util.Log
 import android.view.View
 import android.view.View.MeasureSpec
 import android.widget.Toast
+import by.ubiwca.antibot.BotListIO
+import by.ubiwca.antibot.BotListSerializable
+import by.ubiwca.antibot.BotRest
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
 import com.bumptech.glide.RequestManager
@@ -70,6 +74,7 @@ import org.mariotaku.twidere.util.dagger.GeneralComponent
 import org.mariotaku.twidere.util.support.ViewSupport
 import org.mariotaku.twidere.util.support.view.ViewOutlineProviderCompat
 import org.mariotaku.twidere.util.theme.getCurrentThemeResource
+import java.sql.Timestamp
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -115,6 +120,40 @@ open class MainActivity : ChameleonActivity(), IBaseActivity<MainActivity> {
         GeneralComponent.get(this).inject(this)
         requestManager = Glide.with(this)
         setContentView(R.layout.activity_main)
+        //val botrest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
+        // Checking for updates on bots database. No more than once a day-------------------------
+        val antiBotTimestamp = Timestamp(System.currentTimeMillis()).time
+        val antiBotPreferences = getSharedPreferences(resources.getString(R.string.antiBot_preferences_name), Context.MODE_PRIVATE)
+        val timeStmp = antiBotPreferences.getLong("Timestamp", 0)
+        if (timeStmp == 0L) {
+            val editor = antiBotPreferences.edit()
+            editor.putLong("Timestamp", antiBotTimestamp )
+            editor.commit()
+            Log.d("MainActivity", "Timestamp is 0, updating botlist")
+            // update anyway
+            val botRest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
+            val botList = botRest.getBlockList()
+            val blio = BotListIO()
+            blio.setBotList(botList)
+            blio.saveListToFile()
+
+        } else {
+            if ((antiBotTimestamp - timeStmp) > 86000000L) {
+                // do update DB
+                Log.d("MainActivity", "Updating botlist")
+                val botRest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
+                val botList = botRest.getBlockList()
+                val blio = BotListIO()
+                blio.setBotList(botList)
+                blio.saveListToFile()
+
+
+            }
+        }
+        //----------------------------------------------------------------------------------------
+
+
+
 
         if (!preferences[promotionsEnabledKey]) {
             main.visibility = View.GONE

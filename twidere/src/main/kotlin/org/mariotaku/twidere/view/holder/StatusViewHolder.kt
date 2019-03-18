@@ -9,11 +9,13 @@ import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.ImageView
 import android.widget.TextView
+import by.ubiwca.antibot.BotListIO
 import com.bumptech.glide.RequestManager
 import kotlinx.android.synthetic.main.list_item_status.view.*
 import org.mariotaku.ktextension.*
@@ -87,12 +89,16 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
     private val favoriteButton by lazy { itemView.favorite }
 
     private val eventListener: EventListener
+    private var botList : List<String>? = null
 
     private var statusClickListener: IStatusViewHolder.StatusClickListener? = null
 
 
     init {
         this.eventListener = EventListener(this)
+        val bio = BotListIO()
+        bio.loadListFromFile()
+        botList = bio.getBotList()
 
         if (adapter.mediaPreviewEnabled) {
             View.inflate(mediaPreview.context, R.layout.layout_card_media_preview,
@@ -290,8 +296,19 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
         } else {
             status.timestamp
         }
+        val isBot = botList?.contains(status.user_key.toString().substringBefore('@'))
 
-        nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
+        if (isBot?:false) nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
+        else{
+           // nameView.setPrimaryTextColor(#D50000)
+            val botid = status.user_key.toString().substringBefore('@')
+            val botname = colorNameManager.getUserNickname(status.user_key, status.user_name)
+            nameView.name = "Bot:" + colorNameManager.getUserNickname(status.user_key, status.user_name)
+            Log.d("In StatusViewHolder", "Bot found with id $botid and name $botname")
+        }
+
+
+
         nameView.screenName = "@${status.user_acct}"
 
         if (adapter.profileImageEnabled) {
