@@ -1,5 +1,7 @@
 package by.ubiwca.antibot
 
+import android.arch.persistence.room.Room
+import android.content.Context
 import android.util.Log
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -9,38 +11,22 @@ import java.io.ObjectOutputStream
 /**
  * Created by Пользователь on 18.03.2019.
  */
-class BotListIO {
-    private var botList:List<String>? = null
-    fun getBotList():List<String>? {
-        return botList
+class BotListIO (val context:Context){
+    //private var botList:List<String>? = null
+    //lateinit var db: BotDatabase
+    val db = Room.databaseBuilder(context, BotDatabase::class.java, "botDatabase").build()
+    fun updateDB(botList:List<String>) {
+        Log.d("BotListIO", " Updating DB with ${botList.size} records")
+        db.getBotDao().deleteAll()
+        for (botId in botList) db.getBotDao().insertBot(Bot(botId))
     }
-    fun setBotList(list:List<String>?) {
-        botList = list
+    fun isBot(id:String) : Boolean {
+        Log.d("BotListIO", " Checking ID $id")
+        val resultList = db.getBotDao().getBotById(id)
+        if ((resultList.isEmpty())||(resultList==null)) return false else return true
     }
-    fun loadListFromFile() {
-        try {
-            val fis = FileInputStream("botlist.dat")
-            val ois = ObjectInputStream(fis)
-            val list = ois.readObject() as BotListSerializable
-            setBotList(list.botList)
-        }
-        catch (e:Exception) {
-            Log.d("BotListIO", e.message)
-        }
+    fun clear() {
+        db.close()
     }
-    fun saveListToFile() {
-        try {
-            val fos = FileOutputStream("botlist.dat")
-            val oos = ObjectOutputStream(fos)
-            val oo = BotListSerializable()
-            oo.botList = getBotList()
-            oos.writeObject(oo)
-            oos.flush()
-            oos.close()
-        }
-        catch (e:Exception) {
-            Log.d("BotListIO", e.message)
-        }
 
-    }
 }

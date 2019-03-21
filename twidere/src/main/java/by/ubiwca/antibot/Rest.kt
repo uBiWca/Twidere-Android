@@ -36,10 +36,8 @@ class BotRest(val Url: String) {
 
         while (myThread.isAlive) {
         }
-        if (outputList.size > 0) return outputList else {
-            outputList.add("Empty response!")
-            return outputList
-        }
+
+       return outputList
     }
 
 

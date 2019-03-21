@@ -1,5 +1,7 @@
 package org.mariotaku.twidere.view.holder
 
+import android.arch.persistence.room.Room
+import android.arch.persistence.room.RoomDatabase
 import android.support.annotation.DrawableRes
 import android.support.v4.content.ContextCompat
 import android.support.v4.widget.TextViewCompat
@@ -15,6 +17,8 @@ import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.ImageView
 import android.widget.TextView
+import by.ubiwca.antibot.Bot
+import by.ubiwca.antibot.BotDatabase
 import by.ubiwca.antibot.BotListIO
 import com.bumptech.glide.RequestManager
 import kotlinx.android.synthetic.main.list_item_status.view.*
@@ -49,6 +53,7 @@ import org.mariotaku.twidere.util.Utils.getUserTypeIconRes
 import org.mariotaku.twidere.view.ShapedImageView
 import org.mariotaku.twidere.view.holder.iface.IStatusViewHolder
 import java.lang.ref.WeakReference
+import kotlin.concurrent.thread
 
 /**
  * IDE gives me warning if I don't change default comment, so I wrote this XD
@@ -89,16 +94,22 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
     private val favoriteButton by lazy { itemView.favorite }
 
     private val eventListener: EventListener
-    private var botList : List<String>? = null
+    private var botList : List<Bot>? = null
+    private var db : BotDatabase? = null
 
     private var statusClickListener: IStatusViewHolder.StatusClickListener? = null
 
 
     init {
         this.eventListener = EventListener(this)
-        val bio = BotListIO()
-        bio.loadListFromFile()
-        botList = bio.getBotList()
+       /* thread {
+            val bio = BotListIO()
+            bio.loadListFromFile()
+            botList = bio.getBotList()
+            Log.d("StatusEventHolder", botList?.size.toString())
+        }*/
+        db = Room.databaseBuilder(textView.context, BotDatabase::class.java, "bot.db").build()
+
 
         if (adapter.mediaPreviewEnabled) {
             View.inflate(mediaPreview.context, R.layout.layout_card_media_preview,
@@ -296,16 +307,22 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
         } else {
             status.timestamp
         }
-        val isBot = botList?.contains(status.user_key.toString().substringBefore('@'))
 
-        if (isBot?:false) nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
-        else{
-           // nameView.setPrimaryTextColor(#D50000)
-            val botid = status.user_key.toString().substringBefore('@')
-            val botname = colorNameManager.getUserNickname(status.user_key, status.user_name)
-            nameView.name = "Bot:" + colorNameManager.getUserNickname(status.user_key, status.user_name)
-            Log.d("In StatusViewHolder", "Bot found with id $botid and name $botname")
+        val bid =  status.user_key.toString().substringBefore('@')
+
+        val myThread = thread { val bIO = BotListIO(itemView.context)
+            val tmpStr = colorNameManager.getUserNickname(status.user_key, status.user_name)
+
+        Log.d("StatusViewHolder", "Checking for bot id $bid and nickname $tmpStr")
+
+            if (bIO.isBot(bid)) nameView.name = "Bot:" + tmpStr else
+                nameView.name = tmpStr
+
+            Log.d("StatusViewHolder", bIO.isBot(bid).toString())
+            bIO.clear()
         }
+        while (myThread.isAlive) {}
+        //nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
 
 
 

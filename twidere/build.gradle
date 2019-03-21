@@ -9,11 +9,16 @@ apply plugin: 'androidsvgdrawable'
 buildscript {
     repositories {
         jcenter()
+        google()
     }
 
     dependencies {
+        def room_version = "2.1.0-alpha05"
+//        implementation "androidx.room:room-runtime:$room_version"
+ //       kapt "androidx.room:room-compiler:$room_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:${kotlinVersion}"
+
         classpath("fr.avianey.androidsvgdrawable:gradle-plugin:${pluginVersions['AndroidSvgDrawable']}") {
             // should be excluded to avoid conflict
             exclude group: 'xerces'
@@ -150,11 +155,17 @@ repositories {
 
 dependencies {
 //    wearApp project(':twidere.wear')
+    def roomVersion ='1.1.1'
+   // implementation 'com.android.support:appcompat-v7:28.0.0'
     kapt "com.bluelinelabs:logansquare-compiler:${libVersions['LoganSquare']}"
     kapt "com.hannesdorfmann.parcelableplease:processor:${libVersions['ParcelablePlease']}"
     kapt "com.google.dagger:dagger-compiler:${libVersions['Dagger']}"
     kapt "com.github.mariotaku.ObjectCursor:processor:${libVersions['ObjectCursor']}"
-
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    kapt "android.arch.persistence.room:compiler:$roomVersion"
+   // implementation "androidx.room:room-runtime:$room_version"
+  //  kapt "androidx.room:room-compiler:$room_version"
+   // implementation "androidx.room:room-ktx:$room_version"
     implementation project(':twidere.component.common')
     implementation project(':twidere.component.nyan')
 
