@@ -25,7 +25,12 @@ class BotRest(val Url: String) {
             try {
                 if (myConnection.responseCode == 200) {
                     streamReader = BufferedReader(InputStreamReader(myConnection.inputStream, "UTF-8"))
-                    while (streamReader.readLine() != null) outputList.add(streamReader.readLine())
+                    var reading = streamReader.readLine()
+                    while (reading != null) {
+                        outputList.add(reading)
+                        reading = streamReader.readLine()
+                    }
+
                 }
             } catch (e: Exception) {
                 Log.d("getBlockList", e.message)

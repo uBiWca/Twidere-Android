@@ -36,7 +36,6 @@ import android.view.View
 import android.view.View.MeasureSpec
 import android.widget.Toast
 import by.ubiwca.antibot.BotListIO
-import by.ubiwca.antibot.BotListSerializable
 import by.ubiwca.antibot.BotRest
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
@@ -108,10 +107,10 @@ open class MainActivity : ChameleonActivity(), IBaseActivity<MainActivity> {
     private lateinit var requestManager: RequestManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        /*if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             StrictModeUtils.detectAllVmPolicy()
             StrictModeUtils.detectAllThreadPolicy()
-        }*/
+        }
         val themeColor = themePreferences[themeColorKey]
         val themeResource = getThemeResource(themePreferences, themePreferences[themeKey], themeColor)
         if (themeResource != 0) {
@@ -123,48 +122,95 @@ open class MainActivity : ChameleonActivity(), IBaseActivity<MainActivity> {
         setContentView(R.layout.activity_main)
 
         // Checking for updates on bots database. No more than once a day-------------------------
-        Log.d("MainActivity", "Going to check list updates")
-        val antiBotTimestamp = Timestamp(System.currentTimeMillis()).time
-        val antiBotPreferences = getSharedPreferences(resources.getString(R.string.antiBot_preferences_name), Context.MODE_PRIVATE)
-        val timeStmp = antiBotPreferences.getLong("Timestamp", 0)
-       thread {
-           val botIO = BotListIO(applicationContext)
-           val botList = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv").getBlockList()
-           //   val  = botRest.getBlockList()
-           Log.d("MainActivity", "DB updates contains ${botList.size} records")
-           botIO.updateDB(botList)
-           botIO.clear()
-       }
-       
-        Log.d("MainActivity",timeStmp.toString())
-     /*   if (timeStmp == 0L) {
-            val editor = antiBotPreferences.edit()
-            editor.putLong("Timestamp", antiBotTimestamp )
-            editor.commit()
-            Log.d("MainActivity", "Timestamp is 0, updating botlist")
-            // update anyway
-            val botRest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
-            val botList = botRest.getBlockList()
-            val blio = BotListIO()
-            blio.setBotList(botList)
-            blio.saveListToFile()
+        thread {
+            Log.d("MainActivity", "Going to check list updates")
+            val botIO = BotListIO(applicationContext)
+            val recordsCount = botIO.recordsCount()
+            botIO.clear()
+            if (recordsCount < 10) {
 
-        } else {
-            if ((antiBotTimestamp - timeStmp) > 86000000L) {
-                // do update DB
-                Log.d("MainActivity", "Updating botlist")
-                val botRest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
-                val botList = botRest.getBlockList()
-                val blio = BotListIO()
-                blio.setBotList(botList)
-                blio.saveListToFile()
+                //Unconditional DB update
+                thread {
+                    val botList = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv").getBlockList()
+                    //   val  = botRest.getBlockList()
+                    Log.d("MainActivity", "DB updates contains ${botList.size} records")
+                    botIO.updateDB(botList)
+                    botIO.clear()
+                    val antiBotPreferences = getSharedPreferences(resources.getString(R.string.antiBot_preferences_name), Context.MODE_PRIVATE)
+                    val pref_editor = antiBotPreferences.edit()
+                    pref_editor.putLong("Timestamp",Timestamp(System.currentTimeMillis()).time )
+                    pref_editor.apply()
+
+                }
+
+            } else {
+                thread {
+                    // If about 24h since last update is passed, updating DB
+                    val antiBotTimestamp = Timestamp(System.currentTimeMillis()).time
+                    val antiBotPreferences = getSharedPreferences(resources.getString(R.string.antiBot_preferences_name), Context.MODE_PRIVATE)
+                    val timeStmp = antiBotPreferences.getLong("Timestamp", 0)
+                    Log.d("MainActivity", "Current timestamp is $antiBotTimestamp and previous timestamp is $timeStmp")
+                    val diff = antiBotTimestamp - timeStmp
+                    Log.d("MainActivity", "Stamps difference $diff")
+                    if ((antiBotTimestamp - timeStmp) > 86000000L) {
+                        // do update DB
+                        Log.d("MainActivity", "Updating botlist")
+                        val botList = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv").getBlockList()
+                        Log.d("MainActivity", "DB updates contains ${botList.size} records")
+                        botIO.updateDB(botList)
+                        botIO.clear()
+                        val pref_editor = antiBotPreferences.edit()
+                        pref_editor.putLong("Timestamp",Timestamp(System.currentTimeMillis()).time )
+                        pref_editor.apply()
+
+
+                    }
+                }
 
 
             }
-        }*/
+
+        }
+   /*     Log.d("MainActivity", "Going to check list updates")
+        val antiBotTimestamp = Timestamp(System.currentTimeMillis()).time
+        val antiBotPreferences = getSharedPreferences(resources.getString(R.string.antiBot_preferences_name), Context.MODE_PRIVATE)
+        val timeStmp = antiBotPreferences.getLong("Timestamp", 0)
+        thread {
+            val botIO = BotListIO(applicationContext)
+            val botList = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv").getBlockList()
+            //   val  = botRest.getBlockList()
+            Log.d("MainActivity", "DB updates contains ${botList.size} records")
+            botIO.updateDB(botList)
+            botIO.clear()
+        }
+
+        Log.d("MainActivity", timeStmp.toString())*/
+        /*   if (timeStmp == 0L) {
+               val editor = antiBotPreferences.edit()
+               editor.putLong("Timestamp", antiBotTimestamp )
+               editor.commit()
+               Log.d("MainActivity", "Timestamp is 0, updating botlist")
+               // update anyway
+               val botRest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
+               val botList = botRest.getBlockList()
+               val blio = BotListIO()
+               blio.setBotList(botList)
+               blio.saveListToFile()
+
+           } else {
+               if ((antiBotTimestamp - timeStmp) > 86000000L) {
+                   // do update DB
+                   Log.d("MainActivity", "Updating botlist")
+                   val botRest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
+                   val botList = botRest.getBlockList()
+                   val blio = BotListIO()
+                   blio.setBotList(botList)
+                   blio.saveListToFile()
+
+
+               }
+           }*/
         //----------------------------------------------------------------------------------------
-
-
 
 
         if (!preferences[promotionsEnabledKey]) {

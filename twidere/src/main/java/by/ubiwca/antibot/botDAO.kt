@@ -16,5 +16,8 @@ import android.arch.persistence.room.Query
     fun insertBot(bot: Bot)
     @Query("DELETE FROM bots")
     fun deleteAll()
+    @Query("SELECT * FROM bots")
+    fun getAllBots() : List<Bot>
+
 
 }

@@ -25,6 +25,10 @@ class BotListIO (val context:Context){
         val resultList = db.getBotDao().getBotById(id)
         if ((resultList.isEmpty())||(resultList==null)) return false else return true
     }
+    fun recordsCount(): Int {
+        val list = db.getBotDao().getAllBots()
+        return list.size
+    }
     fun clear() {
         db.close()
     }

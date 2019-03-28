@@ -28,7 +28,7 @@ public class BotList(context : Context) {
                 botFile.createNewFile()
             }
             catch (e:Exception) {
-                Toast.makeText(context, context.resources.getString(org.mariotaku.twidere.R.string.file_error), Toast.LENGTH_LONG).show()
+               // Toast.makeText(context, context.resources.getString(org.mariotaku.twidere.R.string.file_error), Toast.LENGTH_LONG).show()
                 Log.d("in botList", e.message)
             }
         }
