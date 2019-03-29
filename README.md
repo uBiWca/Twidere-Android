@@ -13,7 +13,7 @@
 [APK брать здесь.](https://github.com/uBiWca/Twidere-Android/blob/master/twidere-google-release.apk)
 ## Контакты ##
 [Мой твиттер](https://twitter.com/CrashOv44976865)
-## License ##
+## Лицензия ##
 Приложение распостраняется "как есть", никаких гарантий нет и не будет.
 GNU GPL v3
 
