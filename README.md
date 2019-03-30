@@ -10,7 +10,7 @@
 проекта [MetaBot for Twitter](https://github.com/antibot4navalny/metabot).
 В остальном - от исходного Twidere ничем не отличается.
 ## Установка ##
-[APK брать здесь.](https://github.com/uBiWca/Twidere-Android/blob/master/twidere-google-release.apk)
+[APK брать здесь.](https://github.com/uBiWca/TwidereAntiBot/raw/master/twidere-google-release.apk)
 ## Контакты ##
 [Мой твиттер](https://twitter.com/CrashOv44976865)
 ## Лицензия ##
