@@ -322,7 +322,7 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
             bIO.clear()
         }
         while (myThread.isAlive) {}
-        //nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
+       // nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
 
 
 
@@ -413,11 +413,13 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
         textView.hideIfEmpty()
 
         if (replyCount > 0) {
+            Log.d("StatusViewHolder", "Reply count $replyCount")
             replyCountView.spannable = UnitConvertUtils.calculateProperCount(replyCount)
         } else {
-            replyCountView.spannable = null
+            Log.d("StatusViewHolder", "Reply count is 0")
+            replyCountView.spannable = "0"
         }
-        replyCountView.hideIfEmpty()
+       // replyCountView.hideIfEmpty()
 
         when (status.extras?.visibility) {
             StatusVisibility.PRIVATE -> {

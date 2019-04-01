@@ -126,6 +126,7 @@ abstract class AbsStatusDialogFragment : BaseDialogFragment() {
             }
             account_key = details.key
             account_color = details.color
+
         }
         val currentDialog = this.dialog as? AlertDialog ?: return
         currentDialog.getButton(BUTTON_POSITIVE)?.isEnabled = true

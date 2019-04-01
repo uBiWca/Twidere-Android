@@ -34,10 +34,12 @@ import android.text.Spanned
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import by.ubiwca.antibot.BotListIO
 import kotlinx.android.synthetic.main.adapter_item_status_count_label.view.*
 import kotlinx.android.synthetic.main.header_status.view.*
 import org.mariotaku.kpreferences.get
@@ -66,6 +68,7 @@ import org.mariotaku.twidere.util.*
 import org.mariotaku.twidere.util.twitter.card.TwitterCardViewFactory
 import org.mariotaku.twidere.view.ProfileImageView
 import java.util.*
+import kotlin.concurrent.thread
 
 class DetailStatusViewHolder(
         private val adapter: StatusDetailsAdapter,
@@ -203,8 +206,24 @@ class DetailStatusViewHolder(
         } else {
             timestamp = status.timestamp
         }
+//Bot verification will be here!
+        //nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
+        val bid =  status.user_key.toString().substringBefore('@')
 
-        nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
+        val myThread = thread { val bIO = BotListIO(itemView.context)
+            val tmpStr = colorNameManager.getUserNickname(status.user_key, status.user_name)
+
+            Log.d("DetailStatusViewHolder", "Checking for bot id $bid and nickname $tmpStr")
+
+            if (bIO.isBot(bid)) nameView.name = "Bot:" + tmpStr else
+                nameView.name = tmpStr
+
+            Log.d("StatusViewHolder", bIO.isBot(bid).toString())
+            bIO.clear()
+        }
+        while (myThread.isAlive) {}
+        //---------------------
+
         nameView.screenName = "@${status.user_acct}"
         nameView.updateText(formatter)
 

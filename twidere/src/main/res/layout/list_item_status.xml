@@ -363,7 +363,7 @@
                 android:maxLines="1"
                 android:minHeight="@dimen/button_size_content_card_action"
                 android:textAppearance="?android:textAppearanceSmall"
-                tools:text="255"/>
+                tools:text="0"/>
         </LinearLayout>
 
         <LinearLayout

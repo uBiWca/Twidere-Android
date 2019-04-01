@@ -132,7 +132,6 @@ open class MainActivity : ChameleonActivity(), IBaseActivity<MainActivity> {
                 //Unconditional DB update
                 thread {
                     val botList = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv").getBlockList()
-                    //   val  = botRest.getBlockList()
                     Log.d("MainActivity", "DB updates contains ${botList.size} records")
                     botIO.updateDB(botList)
                     botIO.clear()
@@ -171,45 +170,7 @@ open class MainActivity : ChameleonActivity(), IBaseActivity<MainActivity> {
             }
 
         }
-   /*     Log.d("MainActivity", "Going to check list updates")
-        val antiBotTimestamp = Timestamp(System.currentTimeMillis()).time
-        val antiBotPreferences = getSharedPreferences(resources.getString(R.string.antiBot_preferences_name), Context.MODE_PRIVATE)
-        val timeStmp = antiBotPreferences.getLong("Timestamp", 0)
-        thread {
-            val botIO = BotListIO(applicationContext)
-            val botList = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv").getBlockList()
-            //   val  = botRest.getBlockList()
-            Log.d("MainActivity", "DB updates contains ${botList.size} records")
-            botIO.updateDB(botList)
-            botIO.clear()
-        }
 
-        Log.d("MainActivity", timeStmp.toString())*/
-        /*   if (timeStmp == 0L) {
-               val editor = antiBotPreferences.edit()
-               editor.putLong("Timestamp", antiBotTimestamp )
-               editor.commit()
-               Log.d("MainActivity", "Timestamp is 0, updating botlist")
-               // update anyway
-               val botRest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
-               val botList = botRest.getBlockList()
-               val blio = BotListIO()
-               blio.setBotList(botList)
-               blio.saveListToFile()
-
-           } else {
-               if ((antiBotTimestamp - timeStmp) > 86000000L) {
-                   // do update DB
-                   Log.d("MainActivity", "Updating botlist")
-                   val botRest = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv")
-                   val botList = botRest.getBlockList()
-                   val blio = BotListIO()
-                   blio.setBotList(botList)
-                   blio.saveListToFile()
-
-
-               }
-           }*/
         //----------------------------------------------------------------------------------------
 
 
