@@ -2,6 +2,7 @@ package org.mariotaku.twidere.view.holder
 
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
+import android.graphics.Color
 import android.support.annotation.DrawableRes
 import android.support.v4.content.ContextCompat
 import android.support.v4.widget.TextViewCompat
@@ -315,8 +316,18 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
 
         Log.d("StatusViewHolder", "Checking for bot id $bid and nickname $tmpStr")
 
-            if (bIO.isBot(bid)) nameView.name = "Bot:" + tmpStr else
+            if (bIO.isBot(bid)) {
+                nameView.name = "Bot:" + tmpStr
+                textView.setBackgroundColor(Color.rgb(255,204,204))
+                //mediaLabel.setBackgroundColor(Color.rgb(255,204,204))
+
+            } else
+            {
                 nameView.name = tmpStr
+                textView.setBackgroundColor(android.R.attr.textColorPrimary)
+            }
+
+
 
             Log.d("StatusViewHolder", bIO.isBot(bid).toString())
             bIO.clear()
@@ -417,9 +428,10 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
             replyCountView.spannable = UnitConvertUtils.calculateProperCount(replyCount)
         } else {
             Log.d("StatusViewHolder", "Reply count is 0")
-            replyCountView.spannable = "0"
+            replyCountView.spannable = ""
+            //replycount?
         }
-       // replyCountView.hideIfEmpty()
+         replyCountView.hideIfEmpty()
 
         when (status.extras?.visibility) {
             StatusVisibility.PRIVATE -> {

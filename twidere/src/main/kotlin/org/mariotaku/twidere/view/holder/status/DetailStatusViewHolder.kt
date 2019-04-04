@@ -21,6 +21,7 @@ package org.mariotaku.twidere.view.holder.status
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.graphics.Rect
 import android.support.annotation.UiThread
 import android.support.v4.content.ContextCompat
@@ -211,12 +212,20 @@ class DetailStatusViewHolder(
         val bid =  status.user_key.toString().substringBefore('@')
 
         val myThread = thread { val bIO = BotListIO(itemView.context)
+
             val tmpStr = colorNameManager.getUserNickname(status.user_key, status.user_name)
 
             Log.d("DetailStatusViewHolder", "Checking for bot id $bid and nickname $tmpStr")
 
-            if (bIO.isBot(bid)) nameView.name = "Bot:" + tmpStr else
+            if (bIO.isBot(bid)) {
+                nameView.name = "Bot:" + tmpStr
+            itemView.text.setBackgroundColor(Color.rgb(255,204,204))
+            //itemView.mediaPreview.setBackgroundColor(Color.rgb(255,204,204))
+            } else
+            {
                 nameView.name = tmpStr
+                itemView.text.setBackgroundColor(android.R.attr.textColorPrimary)
+            }
 
             Log.d("StatusViewHolder", bIO.isBot(bid).toString())
             bIO.clear()
