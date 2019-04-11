@@ -8,7 +8,11 @@
 ## Краткое описание ##
 Это форк opensource твиттер-клиента Twidere, со встроенное функцией "подсветки" пользователей данной соцсети, которые содержаться в базе 
 проекта [MetaBot for Twitter](https://github.com/antibot4navalny/metabot).
-Выглядит ![так] (https://i.imgur.com/K2erGsq.png) ![и так для темной темы](https://i.imgur.com/YOBJCfA.png)
+
+![так](https://i.imgur.com/IlHzoZY.png) 
+
+![так для темной темы](https://i.imgur.com/waLApkE.png)
+
 В остальном - от исходного Twidere ничем не отличается.
 ## Установка ##
 [APK брать здесь.](https://github.com/uBiWca/TwidereAntiBot/raw/master/twidere/google/release/twidere-google-release.apk)
