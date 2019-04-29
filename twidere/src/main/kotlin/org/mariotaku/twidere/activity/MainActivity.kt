@@ -131,7 +131,7 @@ open class MainActivity : ChameleonActivity(), IBaseActivity<MainActivity> {
 
                 //Unconditional DB update
                 thread {
-                    val botList = BotRest("https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv").getBlockList()
+                    val botList = BotRest("https://blocktogether.org/show-blocks/HYZ_Qq1P1xyxcDDbgLQ3l8OhhFLAolDZvpUqHP3A.csv").getBlockList()
                     Log.d("MainActivity", "DB updates contains ${botList.size} records")
                     botIO.updateDB(botList)
                     botIO.clear()

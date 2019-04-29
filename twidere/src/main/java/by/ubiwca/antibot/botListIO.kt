@@ -12,8 +12,7 @@ import java.io.ObjectOutputStream
  * Created by Пользователь on 18.03.2019.
  */
 class BotListIO (val context:Context){
-    //private var botList:List<String>? = null
-    //lateinit var db: BotDatabase
+
     val db = Room.databaseBuilder(context, BotDatabase::class.java, "botDatabase").build()
     fun updateDB(botList:List<String>) {
         Log.d("BotListIO", " Updating DB with ${botList.size} records")
@@ -24,6 +23,9 @@ class BotListIO (val context:Context){
         Log.d("BotListIO", " Checking ID $id")
         val resultList = db.getBotDao().getBotById(id)
         if ((resultList.isEmpty())||(resultList==null)) return false else return true
+    }
+    fun getFullList() : List<Bot> {
+        return db.getBotDao().getAllBots()
     }
     fun recordsCount(): Int {
         val list = db.getBotDao().getAllBots()

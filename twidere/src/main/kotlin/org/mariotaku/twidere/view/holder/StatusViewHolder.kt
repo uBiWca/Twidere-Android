@@ -308,8 +308,8 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
         } else {
             status.timestamp
         }
-
-        val bid =  status.user_key.toString().substringBefore('@')
+//--------------------------------------------------------------------------------------------
+        /*val bid =  status.user_key.toString().substringBefore('@')
 
         val myThread = thread { val bIO = BotListIO(itemView.context)
             val tmpStr = colorNameManager.getUserNickname(status.user_key, status.user_name)
@@ -332,8 +332,9 @@ class StatusViewHolder(private val adapter: IStatusesAdapter<*>, itemView: View)
             Log.d("StatusViewHolder", bIO.isBot(bid).toString())
             bIO.clear()
         }
-        while (myThread.isAlive) {}
-       // nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
+        while (myThread.isAlive) {}*/
+        //--------------------------------------------------------------------------------------
+        nameView.name = colorNameManager.getUserNickname(status.user_key, status.user_name)
 
 
 

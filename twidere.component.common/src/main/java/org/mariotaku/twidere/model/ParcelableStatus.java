@@ -18,12 +18,14 @@
 
 package org.mariotaku.twidere.model;
 
+import android.graphics.Color;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
@@ -45,6 +47,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Arrays;
 import java.util.Comparator;
+
 
 @CursorObject(valuesCreator = true, tableInfo = true)
 @JsonObject
@@ -479,7 +482,39 @@ public class ParcelableStatus implements Parcelable, Comparable<ParcelableStatus
     @OnJsonParseComplete
     void onParseComplete() {
         fixSortId();
+        //checkIsBot();
     }
+  /*  private void checkIsBot() {
+        val myThread = thread { val bIO = BotListIO(itemView.context)
+
+            val tmpStr = colorNameManager.getUserNickname(status.user_key, status.user_name)
+
+            Log.d("DetailStatusViewHolder", "Checking for bot id $bid and nickname $tmpStr")
+
+            if (bIO.isBot(bid)) {
+                nameView.name = "Bot:" + tmpStr
+                itemView.text.setBackgroundColor(Color.rgb(255,204,204))
+                //itemView.mediaPreview.setBackgroundColor(Color.rgb(255,204,204))
+            } else
+            {
+                nameView.name = tmpStr
+                itemView.text.setBackgroundColor(android.R.attr.textColorPrimary)
+            }
+
+            Log.d("StatusViewHolder", bIO.isBot(bid).toString())
+            bIO.clear()
+        }
+        while (myThread.isAlive) {}
+        new by.ubiwca.antibot.BotListIO();
+
+        Thread myThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                BotListIO bio = new
+
+            }
+        })
+    }*/
 
     private void fixSortId() {
         if (sort_id <= 0) {

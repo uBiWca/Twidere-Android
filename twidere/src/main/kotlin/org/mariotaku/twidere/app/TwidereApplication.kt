@@ -85,6 +85,8 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class TwidereApplication : Application(), OnSharedPreferenceChangeListener {
+   // private static var appContext : Context
+
 
     @Inject
     lateinit internal var activityTracker: ActivityTracker

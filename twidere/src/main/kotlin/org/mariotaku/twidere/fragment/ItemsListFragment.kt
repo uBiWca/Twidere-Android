@@ -8,10 +8,12 @@ import android.support.v4.app.LoaderManager.LoaderCallbacks
 import android.support.v4.content.FixedAsyncTaskLoader
 import android.support.v4.content.Loader
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.ContextMenu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import by.ubiwca.antibot.BotListIO
 import com.bumptech.glide.RequestManager
 import kotlinx.android.synthetic.main.fragment_content_recyclerview.*
 import org.mariotaku.kpreferences.get
@@ -26,6 +28,7 @@ import org.mariotaku.twidere.extension.model.prefixedHashtag
 import org.mariotaku.twidere.fragment.AbsStatusesFragment.Companion.handleActionClick
 import org.mariotaku.twidere.model.ParcelableHashtag
 import org.mariotaku.twidere.model.ParcelableMedia
+import org.mariotaku.twidere.model.ParcelableStatus
 import org.mariotaku.twidere.model.UserKey
 import org.mariotaku.twidere.util.IntentUtils
 import org.mariotaku.twidere.util.MenuUtils
@@ -34,6 +37,7 @@ import org.mariotaku.twidere.view.ExtendedRecyclerView
 import org.mariotaku.twidere.view.holder.StatusViewHolder
 import org.mariotaku.twidere.view.holder.UserViewHolder
 import org.mariotaku.twidere.view.holder.iface.IStatusViewHolder
+import kotlin.concurrent.thread
 
 /**
  * Created by mariotaku on 16/3/20.
@@ -125,7 +129,35 @@ open class ItemsListFragment : AbsContentListRecyclerViewFragment<VariousItemsAd
     }
 
     override final fun onLoadFinished(loader: Loader<List<Any>?>, data: List<Any>?) {
+
+        //adapter.setData(data)
+      /*  Log.d("BotCheck", "Starting")
+        if (data?.get(0) is ParcelableStatus) {
+            var tempData: MutableList<ParcelableStatus> = mutableListOf()
+            val myThread = thread {
+                val botIO = BotListIO(adapter.context)
+
+                tempData.addAll(data as List<ParcelableStatus>)
+                val botListTmp = botIO.getFullList()
+                Log.d("BotCheck", "Bot List records count ${botListTmp.size}")
+                var botList: MutableList<String> = mutableListOf()
+                for (a in botListTmp) botList.add(a.id)
+                for ((index, usr) in tempData.withIndex()) {
+                    val bid = usr.user_key.toString().substringBefore('@')
+                    if (botList.contains(bid)) {
+                        Log.d("BotCheck", "Bot found with id $bid")
+                        tempData[index].user_name = "Bot:+$bid"
+                    }
+
+                }
+            }
+            while (myThread.isAlive) {}
+            adapter.setData(tempData)
+
+        } else*/
         adapter.setData(data)
+
+
         showContent()
     }
 
