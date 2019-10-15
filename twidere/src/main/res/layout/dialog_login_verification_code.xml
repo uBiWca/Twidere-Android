@@ -25,14 +25,14 @@
     android:orientation="vertical"
     android:padding="@dimen/element_spacing_normal">
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/verificationHint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/element_spacing_normal"
         android:text="@string/login_verification_pin_hint"/>
 
-    <org.mariotaku.twidere.view.FixedEditText
+    <org.mariotaku.twidereAntiBot.view.FixedEditText
         android:id="@+id/editVerificationCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,5 +42,5 @@
         app:backgroundTint="?colorControlStateful">
 
         <requestFocus/>
-    </org.mariotaku.twidere.view.FixedEditText>
+    </org.mariotaku.twidereAntiBot.view.FixedEditText>
 </LinearLayout>

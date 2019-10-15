@@ -15,8 +15,8 @@ buildscript {
 allprojects {
 
     ext {
-        projectGroupId = 'org.mariotaku.twidere'
-        projectVersionCode = 397
+        projectGroupId = 'org.mariotaku.twidereAntiBot'
+        projectVersionCode = 398
         projectVersionName = '3.7.3'
 
         globalCompileSdkVersion = 26

@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:text="@string/exclude_this_host"/>
 
-    <org.mariotaku.twidere.view.FixedEditText
+    <org.mariotaku.twidereAntiBot.view.FixedEditText
         android:id="@+id/editHost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:maxLines="1"
         app:backgroundTint="?colorControlStateful"/>
 
-    <org.mariotaku.twidere.view.FixedEditText
+    <org.mariotaku.twidereAntiBot.view.FixedEditText
         android:id="@+id/editAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

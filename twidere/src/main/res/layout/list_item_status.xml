@@ -16,7 +16,7 @@
   ~  You should have received a copy of the GNU General Public License
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
-<org.mariotaku.twidere.view.ColorLabelRelativeLayout
+<org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -33,7 +33,7 @@
     android:paddingStart="@dimen/element_spacing_normal"
     app:ignorePadding="true">
 
-    <org.mariotaku.twidere.view.IconActionView
+    <org.mariotaku.twidereAntiBot.view.IconActionView
         android:id="@+id/statusInfoIcon"
         style="?profileImageStyle"
         android:layout_width="@dimen/element_size_small"
@@ -50,7 +50,7 @@
         tools:tint="?android:textColorSecondary"
         tools:visibility="visible"/>
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/statusInfoLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
         tools:textSize="@dimen/text_size_extra_small"
         tools:visibility="visible"/>
 
-    <org.mariotaku.twidere.view.ProfileImageView
+    <org.mariotaku.twidereAntiBot.view.ProfileImageView
         android:id="@+id/profileImage"
         style="?profileImageStyle"
         android:layout_width="@dimen/icon_size_status_profile_image"
@@ -87,7 +87,7 @@
         tools:src="@drawable/ic_profile_image_twidere"
         tools:visibility="visible"/>
 
-    <org.mariotaku.twidere.view.BoundsImageView
+    <org.mariotaku.twidereAntiBot.view.BoundsImageView
         android:id="@+id/profileType"
         android:layout_width="@dimen/icon_size_profile_type"
         android:layout_height="@dimen/icon_size_profile_type"
@@ -115,7 +115,7 @@
         android:layout_toEndOf="@+id/profileImage"
         android:layout_toRightOf="@+id/profileImage">
 
-        <org.mariotaku.twidere.view.NameView
+        <org.mariotaku.twidereAntiBot.view.NameView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
             app:nv_primaryTextStyle="bold"
             app:nv_secondaryTextColor="?android:textColorSecondary"/>
 
-        <org.mariotaku.twidere.view.ShortTimeView
+        <org.mariotaku.twidereAntiBot.view.ShortTimeView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
             tools:text="42 mins ago"
             tools:textSize="@dimen/text_size_extra_small"/>
 
-        <org.mariotaku.twidere.view.TimelineContentTextView
+        <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
             android:id="@+id/summary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
             tools:text="@string/sample_summary_text"
             tools:visibility="visible"/>
 
-        <org.mariotaku.twidere.view.TimelineContentTextView
+        <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -168,7 +168,7 @@
             tools:text="@string/sample_status_text"
             tools:visibility="visible"/>
 
-        <org.mariotaku.twidere.view.ActionIconThemedTextView
+        <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
             android:id="@+id/mediaLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
             app:iabColor="?android:textColorSecondary"
             tools:text="@string/label_media"/>
 
-        <org.mariotaku.twidere.view.CardMediaContainer
+        <org.mariotaku.twidereAntiBot.view.CardMediaContainer
             android:id="@+id/mediaPreview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -205,9 +205,9 @@
             <!-- Child views will be inflated if media preview enabled in ViewHolder -->
             <!--<include layout="@layout/layout_card_media_preview"/>-->
 
-        </org.mariotaku.twidere.view.CardMediaContainer>
+        </org.mariotaku.twidereAntiBot.view.CardMediaContainer>
 
-        <org.mariotaku.twidere.view.ColorLabelRelativeLayout
+        <org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout
             android:id="@+id/quotedView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -227,7 +227,7 @@
             tools:visibility="visible">
 
 
-            <org.mariotaku.twidere.view.NameView
+            <org.mariotaku.twidereAntiBot.view.NameView
                 android:id="@+id/quotedName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -248,7 +248,7 @@
                 app:nv_secondaryTextColor="?android:textColorSecondary"
                 tools:visibility="visible"/>
 
-            <org.mariotaku.twidere.view.TimelineContentTextView
+            <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
                 android:id="@+id/quotedText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -269,7 +269,7 @@
                 tools:text="@string/sample_status_text"
                 tools:visibility="visible"/>
 
-            <org.mariotaku.twidere.view.ActionIconThemedTextView
+            <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
                 android:id="@+id/quotedMediaLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -288,7 +288,7 @@
                 tools:text="@string/label_media"
                 tools:visibility="gone"/>
 
-            <org.mariotaku.twidere.view.CardMediaContainer
+            <org.mariotaku.twidereAntiBot.view.CardMediaContainer
                 android:id="@+id/quotedMediaPreview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -304,8 +304,8 @@
                 <!-- Child views will be inflated if media preview enabled in ViewHolder -->
                 <include layout="@layout/layout_card_media_preview"/>
 
-            </org.mariotaku.twidere.view.CardMediaContainer>
-        </org.mariotaku.twidere.view.ColorLabelRelativeLayout>
+            </org.mariotaku.twidereAntiBot.view.CardMediaContainer>
+        </org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout>
 
     </RelativeLayout>
 
@@ -337,7 +337,7 @@
             android:background="?selectableItemBackgroundBorderless"
             android:focusable="false">
 
-            <org.mariotaku.twidere.view.IconActionView
+            <org.mariotaku.twidereAntiBot.view.IconActionView
                 android:id="@+id/replyIcon"
                 android:layout_width="@dimen/button_size_content_card_action"
                 android:layout_height="@dimen/button_size_content_card_action"
@@ -351,7 +351,7 @@
                 app:iabColor="?android:textColorSecondary"
                 tools:tint="?android:textColorSecondary"/>
 
-            <org.mariotaku.twidere.view.ActionIconThemedTextView
+            <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
                 android:id="@+id/replyCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -375,7 +375,7 @@
             android:background="?selectableItemBackgroundBorderless"
             android:focusable="false">
 
-            <org.mariotaku.twidere.view.IconActionView
+            <org.mariotaku.twidereAntiBot.view.IconActionView
                 android:id="@+id/retweetIcon"
                 android:layout_width="@dimen/button_size_content_card_action"
                 android:layout_height="@dimen/button_size_content_card_action"
@@ -389,7 +389,7 @@
                 app:iabColor="?android:textColorSecondary"
                 tools:tint="?android:textColorSecondary"/>
 
-            <org.mariotaku.twidere.view.ActionIconThemedTextView
+            <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
                 android:id="@+id/retweetCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -414,7 +414,7 @@
             android:background="?selectableItemBackgroundBorderless"
             android:focusable="false">
 
-            <org.mariotaku.twidere.view.IconActionView
+            <org.mariotaku.twidereAntiBot.view.IconActionView
                 android:id="@+id/favoriteIcon"
                 android:layout_width="@dimen/button_size_content_card_action"
                 android:layout_height="@dimen/button_size_content_card_action"
@@ -428,7 +428,7 @@
                 app:iabColor="?android:textColorSecondary"
                 tools:tint="?android:textColorSecondary"/>
 
-            <org.mariotaku.twidere.view.ActionIconThemedTextView
+            <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
                 android:id="@+id/favoriteCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -444,7 +444,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <org.mariotaku.twidere.view.IconActionButton
+    <org.mariotaku.twidereAntiBot.view.IconActionButton
         android:id="@+id/itemMenu"
         style="?cardActionButtonStyle"
         android:layout_width="@dimen/button_size_content_card_action"
@@ -458,4 +458,4 @@
         tools:tint="?android:textColorSecondary"
         tools:visibility="visible"/>
 
-</org.mariotaku.twidere.view.ColorLabelRelativeLayout>
+</org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout>

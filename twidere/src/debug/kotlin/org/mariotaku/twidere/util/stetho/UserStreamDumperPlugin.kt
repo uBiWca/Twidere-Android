@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.util.stetho
+package org.mariotaku.twidereAntiBot.util.stetho
 
 import android.accounts.AccountManager
 import android.content.Context
@@ -36,17 +36,17 @@ import org.mariotaku.microblog.library.twitter.annotation.StreamWith
 import org.mariotaku.microblog.library.twitter.model.Activity
 import org.mariotaku.microblog.library.twitter.model.DirectMessage
 import org.mariotaku.microblog.library.twitter.model.Status
-import org.mariotaku.twidere.annotation.AccountType
-import org.mariotaku.twidere.extension.model.api.microblog.toParcelable
-import org.mariotaku.twidere.extension.model.newMicroBlogInstance
-import org.mariotaku.twidere.model.AccountDetails
-import org.mariotaku.twidere.model.ActivityTitleSummaryMessage
-import org.mariotaku.twidere.model.UserKey
-import org.mariotaku.twidere.model.util.AccountUtils
-import org.mariotaku.twidere.util.UserColorNameManager
-import org.mariotaku.twidere.util.dagger.DependencyHolder
-import org.mariotaku.twidere.util.streaming.FanfouTimelineStreamCallback
-import org.mariotaku.twidere.util.streaming.TwitterTimelineStreamCallback
+import org.mariotaku.twidereAntiBot.annotation.AccountType
+import org.mariotaku.twidereAntiBot.extension.model.api.microblog.toParcelable
+import org.mariotaku.twidereAntiBot.extension.model.newMicroBlogInstance
+import org.mariotaku.twidereAntiBot.model.AccountDetails
+import org.mariotaku.twidereAntiBot.model.ActivityTitleSummaryMessage
+import org.mariotaku.twidereAntiBot.model.UserKey
+import org.mariotaku.twidereAntiBot.model.util.AccountUtils
+import org.mariotaku.twidereAntiBot.util.UserColorNameManager
+import org.mariotaku.twidereAntiBot.util.dagger.DependencyHolder
+import org.mariotaku.twidereAntiBot.util.streaming.FanfouTimelineStreamCallback
+import org.mariotaku.twidereAntiBot.util.streaming.TwitterTimelineStreamCallback
 
 /**
  * Created by mariotaku on 2017/3/9.

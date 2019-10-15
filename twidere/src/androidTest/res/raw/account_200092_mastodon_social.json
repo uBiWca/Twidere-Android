@@ -1,7 +1,7 @@
 {
   "account": {
     "name": "mariotaku@mastodon.social",
-    "type": "org.mariotaku.twidere.account"
+    "type": "org.mariotaku.twidereAntiBot.account"
   },
   "activated": true,
   "color": "#000000",

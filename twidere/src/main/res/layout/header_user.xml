@@ -26,7 +26,7 @@
     android:layout_height="wrap_content"
     tools:showIn="@layout/fragment_user">
 
-    <org.mariotaku.twidere.view.ProfileBannerSpace
+    <org.mariotaku.twidereAntiBot.view.ProfileBannerSpace
         android:id="@+id/profileBannerSpace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         android:layout_alignBottom="@+id/profileNameContainer"
         android:layout_alignTop="@+id/profileNameContainer"/>
 
-    <org.mariotaku.twidere.view.ColorLabelRelativeLayout
+    <org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout
         android:id="@+id/profileNameContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
             android:minHeight="@dimen/element_size_normal"
             android:minWidth="@dimen/element_size_normal">
 
-            <org.mariotaku.twidere.view.IconActionButton
+            <org.mariotaku.twidereAntiBot.view.IconActionButton
                 android:id="@+id/follow"
                 style="?buttonStyleSmall"
                 android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
             android:minHeight="@dimen/element_size_normal"
             android:orientation="vertical">
 
-            <org.mariotaku.twidere.view.FixedTextView
+            <org.mariotaku.twidereAntiBot.view.FixedTextView
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 android:baselineAligned="true"
                 android:orientation="horizontal">
 
-                <org.mariotaku.twidere.view.FixedTextView
+                <org.mariotaku.twidereAntiBot.view.FixedTextView
                     android:id="@+id/screenName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                     android:textColor="?android:textColorPrimary"
                     tools:text="\@screenname"/>
 
-                <org.mariotaku.twidere.view.FixedTextView
+                <org.mariotaku.twidereAntiBot.view.FixedTextView
                     android:id="@+id/followingYouIndicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
             </LinearLayout>
         </RelativeLayout>
 
-    </org.mariotaku.twidere.view.ColorLabelRelativeLayout>
+    </org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout>
 
     <View
         android:layout_width="match_parent"
@@ -179,7 +179,7 @@
                 android:orientation="vertical"
                 android:padding="@dimen/element_spacing_small">
 
-                <org.mariotaku.twidere.view.TimelineContentTextView
+                <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -201,13 +201,13 @@
                 android:orientation="horizontal"
                 android:padding="@dimen/element_spacing_small">
 
-                <org.mariotaku.twidere.view.IconActionView
+                <org.mariotaku.twidereAntiBot.view.IconActionView
                     android:layout_width="@dimen/element_size_small"
                     android:layout_height="@dimen/element_size_small"
                     android:color="?android:textColorPrimary"
                     android:src="@drawable/ic_action_location"/>
 
-                <org.mariotaku.twidere.view.FixedTextView
+                <org.mariotaku.twidereAntiBot.view.FixedTextView
                     android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -231,13 +231,13 @@
                 android:orientation="horizontal"
                 android:padding="@dimen/element_spacing_small">
 
-                <org.mariotaku.twidere.view.IconActionView
+                <org.mariotaku.twidereAntiBot.view.IconActionView
                     android:layout_width="@dimen/element_size_small"
                     android:layout_height="@dimen/element_size_small"
                     android:color="?android:textColorPrimary"
                     android:src="@drawable/ic_action_web"/>
 
-                <org.mariotaku.twidere.view.TimelineContentTextView
+                <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
                     android:id="@+id/url"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -261,13 +261,13 @@
                 android:orientation="horizontal"
                 android:padding="@dimen/element_spacing_small">
 
-                <org.mariotaku.twidere.view.IconActionView
+                <org.mariotaku.twidereAntiBot.view.IconActionView
                     android:layout_width="@dimen/element_size_small"
                     android:layout_height="@dimen/element_size_small"
                     android:color="?android:textColorPrimary"
                     android:src="@drawable/ic_action_time"/>
 
-                <org.mariotaku.twidere.view.FixedTextView
+                <org.mariotaku.twidereAntiBot.view.FixedTextView
                     android:id="@+id/createdAt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -299,7 +299,7 @@
                     android:orientation="vertical"
                     android:padding="@dimen/element_spacing_small">
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:id="@+id/followersCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -308,7 +308,7 @@
                         android:textColor="?android:textColorPrimary"
                         tools:text="255"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
@@ -330,7 +330,7 @@
                     android:orientation="vertical"
                     android:padding="@dimen/element_spacing_small">
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:id="@+id/friendsCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -339,7 +339,7 @@
                         android:textColor="?android:textColorPrimary"
                         tools:text="255"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
@@ -361,7 +361,7 @@
                     android:orientation="vertical"
                     android:padding="@dimen/element_spacing_small">
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:id="@+id/listedCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -370,7 +370,7 @@
                         android:textColor="?android:textColorPrimary"
                         tools:text="255"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
@@ -392,7 +392,7 @@
                     android:orientation="vertical"
                     android:padding="@dimen/element_spacing_small">
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:id="@+id/groupsCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -401,7 +401,7 @@
                         android:textColor="?android:textColorPrimary"
                         tools:text="255"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
@@ -419,7 +419,7 @@
 
     </FrameLayout>
 
-    <org.mariotaku.twidere.view.ProfileImageView
+    <org.mariotaku.twidereAntiBot.view.ProfileImageView
         android:id="@+id/profileImage"
         style="?profileImageStyleLarge"
         android:layout_width="@dimen/icon_size_user_profile"
@@ -432,7 +432,7 @@
         tools:src="@drawable/ic_profile_image_twidere"
         tools:visibility="visible"/>
 
-    <org.mariotaku.twidere.view.BoundsImageView
+    <org.mariotaku.twidereAntiBot.view.BoundsImageView
         android:id="@+id/profileType"
         style="@style/Widget.ProfileType"
         android:layout_width="@dimen/icon_size_profile_type_user_profile"

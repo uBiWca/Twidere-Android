@@ -26,7 +26,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject;
 import org.mariotaku.commons.logansquare.JsonStringConverter;
 import org.mariotaku.microblog.library.fanfou.model.util.StreamDateConverter;
 import org.mariotaku.microblog.library.twitter.model.User;
-import org.mariotaku.twidere.util.JsonSerializer;
+import org.mariotaku.twidereAntiBot.util.JsonSerializer;
 
 import java.io.IOException;
 import java.util.Date;

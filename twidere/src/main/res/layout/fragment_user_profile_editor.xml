@@ -53,7 +53,7 @@
                     android:orientation="horizontal"
                     android:padding="@dimen/element_spacing_normal">
 
-                    <org.mariotaku.twidere.view.ForegroundImageView
+                    <org.mariotaku.twidereAntiBot.view.ForegroundImageView
                         android:id="@+id/profileImage"
                         android:layout_width="@dimen/element_size_mlarge"
                         android:layout_height="@dimen/element_size_mlarge"
@@ -62,7 +62,7 @@
                         android:scaleType="centerCrop"
                         tools:src="@drawable/ic_profile_image_twidere"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/element_spacing_normal"
@@ -86,7 +86,7 @@
                     android:visibility="gone"
                     tools:visibility="visible">
 
-                    <org.mariotaku.twidere.view.ForegroundImageView
+                    <org.mariotaku.twidereAntiBot.view.ForegroundImageView
                         android:id="@+id/profileBanner"
                         android:layout_width="@dimen/element_size_mlarge"
                         android:layout_height="@dimen/element_size_mlarge"
@@ -95,7 +95,7 @@
                         android:scaleType="centerCrop"
                         tools:src="@drawable/nyan_stars_background_tile"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/element_spacing_normal"
@@ -117,7 +117,7 @@
                     android:orientation="horizontal"
                     android:padding="@dimen/element_spacing_normal">
 
-                    <org.mariotaku.twidere.view.ForegroundImageView
+                    <org.mariotaku.twidereAntiBot.view.ForegroundImageView
                         android:id="@+id/profileBackground"
                         android:layout_width="@dimen/element_size_mlarge"
                         android:layout_height="@dimen/element_size_mlarge"
@@ -126,7 +126,7 @@
                         android:scaleType="centerCrop"
                         tools:src="@drawable/nyan_stars_background_tile"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/element_spacing_normal"
@@ -224,14 +224,14 @@
                     android:orientation="horizontal"
                     android:padding="@dimen/element_spacing_normal">
 
-                    <org.mariotaku.twidere.view.ForegroundColorView
+                    <org.mariotaku.twidereAntiBot.view.ForegroundColorView
                         android:id="@+id/linkColor"
                         android:layout_width="@dimen/element_size_normal"
                         android:layout_height="@dimen/element_size_normal"
                         android:layout_weight="0"
                         tools:color="@color/branding_color"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/element_spacing_normal"
@@ -254,14 +254,14 @@
                     android:orientation="horizontal"
                     android:padding="@dimen/element_spacing_normal">
 
-                    <org.mariotaku.twidere.view.ForegroundColorView
+                    <org.mariotaku.twidereAntiBot.view.ForegroundColorView
                         android:id="@+id/backgroundColor"
                         android:layout_width="@dimen/element_size_normal"
                         android:layout_height="@dimen/element_size_normal"
                         android:layout_weight="0"
                         tools:color="@color/branding_color"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/element_spacing_normal"

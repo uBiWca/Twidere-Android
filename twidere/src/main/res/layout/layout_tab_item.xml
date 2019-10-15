@@ -20,7 +20,7 @@
 <!--suppress AndroidUnknownAttribute -->
 <view xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
-      class="org.mariotaku.twidere.view.TabPagerIndicator$ItemLayout"
+      class="org.mariotaku.twidereAntiBot.view.TabPagerIndicator$ItemLayout"
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
       android:background="?selectableItemBackground"
@@ -42,7 +42,7 @@
             android:scaleType="centerInside"
             tools:src="@drawable/ic_action_home"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/tab_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <org.mariotaku.twidere.view.BadgeView
+    <org.mariotaku.twidereAntiBot.view.BadgeView
         android:id="@+id/unread_indicator"
         android:layout_width="@dimen/unread_indicator_size"
         android:layout_height="@dimen/unread_indicator_size"

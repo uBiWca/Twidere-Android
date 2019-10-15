@@ -3,84 +3,84 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/keyboard_shortcuts">
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="cat_general"
         android:title="@string/general">
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="compose"
             android:title="@string/action_compose"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="search"
             android:title="@string/action_search"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="message"
             android:title="@string/title_direct_messages"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="cat_home"
         android:title="@string/title_home">
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="home.accounts_dashboard"
             android:tag="home"
             android:title="@string/open_accounts_dashboard"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="cat_navigation"
         android:title="@string/navigation">
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.previous"
             android:tag="navigation"
             android:title="@string/previous_item"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.next"
             android:tag="navigation"
             android:title="@string/next_item"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.page_down"
             android:tag="navigation"
             android:title="@string/page_down"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.page_up"
             android:tag="navigation"
             android:title="@string/page_up"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.previous_tab"
             android:tag="navigation"
             android:title="@string/previous_tab"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.next_tab"
             android:tag="navigation"
             android:title="@string/next_tab"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.refresh"
             android:tag="navigation"
             android:title="@string/action_refresh"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.back"
             android:tag="navigation"
             android:title="@string/keyboard_shortcut_back"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="navigation.top"
             android:tag="navigation"
             android:title="@string/jump_to_top"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="cat_statuses"
         android:title="@string/title_statuses">
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="status.reply"
             android:tag="status"
             android:title="@string/action_reply"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="status.retweet"
             android:tag="status"
             android:title="@string/action_retweet"/>
-        <org.mariotaku.twidere.preference.KeyboardShortcutPreference
+        <org.mariotaku.twidereAntiBot.preference.KeyboardShortcutPreference
             android:action="status.favorite"
             android:tag="status"
             android:title="@string/action_favorite"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 </PreferenceScreen>

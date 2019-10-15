@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/sectionHeader"
             style="?android:listSeparatorTextViewStyle"
             android:layout_width="match_parent"

@@ -17,15 +17,15 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.extension.model
+package org.mariotaku.twidereAntiBot.extension.model
 
 import android.accounts.Account
 import android.accounts.AccountManager
 import org.mariotaku.ktextension.HexColorFormat
 import org.mariotaku.ktextension.toHexColor
-import org.mariotaku.twidere.TwidereConstants.*
-import org.mariotaku.twidere.model.AccountDetails
-import org.mariotaku.twidere.util.JsonSerializer
+import org.mariotaku.twidereAntiBot.TwidereConstants.*
+import org.mariotaku.twidereAntiBot.model.AccountDetails
+import org.mariotaku.twidereAntiBot.util.JsonSerializer
 
 /**
  * Created by mariotaku on 2017/4/16.

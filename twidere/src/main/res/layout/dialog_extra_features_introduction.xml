@@ -8,7 +8,7 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/element_spacing_normal">
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/element_spacing_normal"
@@ -18,7 +18,7 @@
 
     <TableRow android:layout_margin="@dimen/element_spacing_normal">
 
-        <org.mariotaku.twidere.view.IconActionView
+        <org.mariotaku.twidereAntiBot.view.IconActionView
             android:id="@+id/featureIcon"
             android:layout_width="@dimen/element_size_small"
             android:layout_height="@dimen/element_size_small"
@@ -26,7 +26,7 @@
             app:iabColor="?android:textColorSecondary"
             tools:src="@drawable/ic_action_refresh"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/featureDescription"
             android:layout_marginLeft="@dimen/element_spacing_normal"
             android:layout_marginStart="@dimen/element_spacing_normal"
@@ -37,7 +37,7 @@
             tools:text="@string/extra_feature_description_sync_data"/>
     </TableRow>
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/element_spacing_normal"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="@string/action_purchase_features_pack"/>
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/restorePurchaseHint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

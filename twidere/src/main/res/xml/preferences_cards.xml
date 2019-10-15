@@ -5,15 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/cards">
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="cat_card_preview"
         android:order="11"
         android:title="@string/preview">
-        <org.mariotaku.twidere.preference.CardPreviewPreference
+        <org.mariotaku.twidereAntiBot.preference.CardPreviewPreference
             android:key="card_preview"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
-    <org.mariotaku.twidere.preference.SeekBarDialogPreference
+    <org.mariotaku.twidereAntiBot.preference.SeekBarDialogPreference
         android:defaultValue="15"
         android:key="text_size_int"
         android:order="22"
@@ -24,7 +24,7 @@
         <extra
             android:name="should_recreate"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.SeekBarDialogPreference>
+    </org.mariotaku.twidereAntiBot.preference.SeekBarDialogPreference>
 
     <SwitchPreferenceCompat
         android:defaultValue="true"
@@ -36,7 +36,7 @@
             android:value="true"/>
     </SwitchPreferenceCompat>
 
-    <org.mariotaku.twidere.preference.EntrySummaryListPreference
+    <org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference
         android:defaultValue="@string/default_profile_image_style"
         android:entries="@array/entries_profile_image_style"
         android:entryValues="@array/values_profile_image_style"
@@ -46,7 +46,7 @@
         <extra
             android:name="should_recreate"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.EntrySummaryListPreference>
+    </org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference>
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
@@ -58,7 +58,7 @@
             android:value="true"/>
     </SwitchPreferenceCompat>
 
-    <org.mariotaku.twidere.preference.EntrySummaryListPreference
+    <org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference
         android:defaultValue="crop"
         android:entries="@array/entries_media_preview_style"
         android:entryValues="@array/values_media_preview_style"
@@ -68,9 +68,9 @@
         <extra
             android:name="should_recreate"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.EntrySummaryListPreference>
+    </org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference>
 
-    <org.mariotaku.twidere.preference.LinkHighlightPreference
+    <org.mariotaku.twidereAntiBot.preference.LinkHighlightPreference
         android:defaultValue="none"
         android:key="link_highlight_option"
         android:order="27"
@@ -78,7 +78,7 @@
         <extra
             android:name="should_recreate"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.LinkHighlightPreference>
+    </org.mariotaku.twidereAntiBot.preference.LinkHighlightPreference>
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
@@ -110,7 +110,7 @@
             android:value="true"/>
     </SwitchPreferenceCompat>
 
-    <org.mariotaku.twidere.preference.FavoriteConfirmSwitchPreference
+    <org.mariotaku.twidereAntiBot.preference.FavoriteConfirmSwitchPreference
         android:defaultValue="false"
         android:key="favorite_confirmation"
         android:order="35"

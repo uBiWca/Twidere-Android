@@ -34,7 +34,7 @@
         android:icon="@drawable/ic_action_more_vertical"
         android:title="@string/select_account"
         android:visible="false"
-        app:actionProviderClass="org.mariotaku.twidere.menu.AccountToggleProvider"
+        app:actionProviderClass="org.mariotaku.twidereAntiBot.menu.AccountToggleProvider"
         app:showAsAction="always"
         tools:ignore="AlwaysShowAction"/>
 

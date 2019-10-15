@@ -4,12 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/other_settings">
 
-    <org.mariotaku.twidere.preference.SettingsImportExportPreference
+    <org.mariotaku.twidereAntiBot.preference.SettingsImportExportPreference
         android:key="import_export_settings"
         android:title="@string/import_export_settings"/>
 
     <Preference
-        android:fragment="org.mariotaku.twidere.fragment.SettingsDetailsFragment"
+        android:fragment="org.mariotaku.twidereAntiBot.fragment.SettingsDetailsFragment"
         android:title="@string/scrapyard">
         <extra
             android:name="resid"
@@ -25,7 +25,7 @@
             android:value="true"/>
     </SwitchPreferenceCompat>
 
-    <org.mariotaku.twidere.preference.EntrySummaryListPreference
+    <org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference
         android:defaultValue=""
         android:entries="@array/values_app_languages"
         android:entryValues="@array/entries_app_languages"
@@ -34,10 +34,10 @@
         <extra
             android:name="should_restart"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.EntrySummaryListPreference>
+    </org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference>
 
     <Preference
-        android:fragment="org.mariotaku.twidere.fragment.NetworkDiagnosticsFragment"
+        android:fragment="org.mariotaku.twidereAntiBot.fragment.NetworkDiagnosticsFragment"
         android:title="@string/network_diagnostics"/>
 
 </PreferenceScreen>

@@ -32,7 +32,7 @@
     tools:background="?cardItemBackgroundColor"
     tools:ignore="Overdraw">
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/retweetedBy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         android:textColor="?android:textColorSecondary"
         tools:text="Retweeted by Mariotaku"/>
 
-    <org.mariotaku.twidere.view.ColorLabelRelativeLayout
+    <org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout
         android:id="@+id/profileContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
         android:padding="@dimen/element_spacing_small"
         app:ignorePadding="true">
 
-        <org.mariotaku.twidere.view.ProfileImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileImageView
             android:id="@+id/profileImage"
             style="?profileImageStyle"
             android:layout_width="@dimen/icon_size_card_details"
@@ -102,7 +102,7 @@
             android:paddingRight="4dp"
             android:paddingStart="8dp">
 
-            <org.mariotaku.twidere.view.NameView
+            <org.mariotaku.twidereAntiBot.view.NameView
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                 app:nv_secondaryTextColor="?android:textColorSecondary"
                 app:nv_twoLine="false"/>
 
-            <org.mariotaku.twidere.view.TimelineContentTextView
+            <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
                 android:id="@+id/timeSource"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -146,10 +146,10 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"/>
         </FrameLayout>
-    </org.mariotaku.twidere.view.ColorLabelRelativeLayout>
+    </org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout>
 
 
-    <org.mariotaku.twidere.view.TimelineContentTextView
+    <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
         android:id="@+id/summary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
         tools:text="@string/sample_summary_text"
         tools:visibility="visible"/>
 
-    <org.mariotaku.twidere.view.TimelineContentTextView
+    <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -192,7 +192,7 @@
         android:visibility="gone"
         tools:visibility="visible">
 
-        <org.mariotaku.twidere.view.ActionIconThemedTextView
+        <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
             android:id="@+id/translateLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -211,7 +211,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="?android:textColorSecondary"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/translateResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -221,7 +221,7 @@
             android:visibility="gone"
             tools:text="@string/sample_status_text"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/translateChangeLanguage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -250,7 +250,7 @@
         android:layout_below="@+id/translateContainer"
         tools:visibility="visible">
 
-        <org.mariotaku.twidere.view.CardMediaContainer
+        <org.mariotaku.twidereAntiBot.view.CardMediaContainer
             android:id="@+id/mediaPreview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -263,7 +263,7 @@
                 layout="@layout/layout_card_media_preview"
                 tools:ignore="DuplicateIncludedIds"/>
 
-        </org.mariotaku.twidere.view.CardMediaContainer>
+        </org.mariotaku.twidereAntiBot.view.CardMediaContainer>
 
         <LinearLayout
             android:id="@+id/mediaPreviewLoad"
@@ -276,7 +276,7 @@
             android:visibility="gone"
             tools:visibility="visible">
 
-            <org.mariotaku.twidere.view.ActionIconThemedTextView
+            <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -290,14 +290,14 @@
 
     </FrameLayout>
 
-    <org.mariotaku.twidere.view.TwitterCardContainer
+    <org.mariotaku.twidereAntiBot.view.TwitterCardContainer
         android:id="@+id/twitterCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mediaPreviewContainer"
         android:visibility="gone"/>
 
-    <org.mariotaku.twidere.view.ColorLabelLinearLayout
+    <org.mariotaku.twidereAntiBot.view.ColorLabelLinearLayout
         android:id="@+id/quotedView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -307,7 +307,7 @@
         android:padding="@dimen/element_spacing_normal"
         app:ignorePadding="false">
 
-        <org.mariotaku.twidere.view.NameView
+        <org.mariotaku.twidereAntiBot.view.NameView
             android:id="@+id/quotedName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -321,7 +321,7 @@
             app:nv_twoLine="false"
             tools:visibility="visible"/>
 
-        <org.mariotaku.twidere.view.TimelineContentTextView
+        <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
             android:id="@+id/quotedText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -342,7 +342,7 @@
             android:orientation="horizontal"
             tools:visibility="gone">
 
-            <org.mariotaku.twidere.view.IconActionView
+            <org.mariotaku.twidereAntiBot.view.IconActionView
                 android:layout_width="@dimen/element_size_small"
                 android:layout_height="@dimen/element_size_small"
                 android:layout_weight="0"
@@ -351,7 +351,7 @@
                 android:src="@drawable/ic_action_gallery"
                 tools:tint="?android:textColorSecondary"/>
 
-            <org.mariotaku.twidere.view.FixedTextView
+            <org.mariotaku.twidereAntiBot.view.FixedTextView
                 android:id="@+id/quotedMediaLabelText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -362,7 +362,7 @@
 
         </LinearLayout>
 
-        <org.mariotaku.twidere.view.CardMediaContainer
+        <org.mariotaku.twidereAntiBot.view.CardMediaContainer
             android:id="@+id/quotedMediaPreview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -374,11 +374,11 @@
             <!-- Child views will be inflated if media preview enabled in ViewHolder -->
             <include layout="@layout/layout_card_media_preview"/>
 
-        </org.mariotaku.twidere.view.CardMediaContainer>
+        </org.mariotaku.twidereAntiBot.view.CardMediaContainer>
 
-    </org.mariotaku.twidere.view.ColorLabelLinearLayout>
+    </org.mariotaku.twidereAntiBot.view.ColorLabelLinearLayout>
 
-    <org.mariotaku.twidere.view.ActionIconThemedTextView
+    <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
         android:id="@+id/locationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

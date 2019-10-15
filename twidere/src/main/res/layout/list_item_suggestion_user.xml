@@ -31,7 +31,7 @@
     android:paddingRight="@dimen/element_spacing_small"
     android:paddingTop="@dimen/element_spacing_xsmall">
 
-    <org.mariotaku.twidere.view.ProfileImageView
+    <org.mariotaku.twidereAntiBot.view.ProfileImageView
         android:id="@android:id/icon"
         style="?profileImageStyle"
         android:layout_width="@dimen/element_size_quick_search_bar_item_icon"
@@ -50,7 +50,7 @@
         android:paddingRight="0dp"
         android:paddingStart="@dimen/element_spacing_small">
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@android:id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:textColor="?android:textColorPrimary"
             tools:text="Mariotaku"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@android:id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

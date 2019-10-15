@@ -26,7 +26,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:textColor="?android:textColorTertiary"
         tools:text="Yesterday"/>
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

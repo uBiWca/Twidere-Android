@@ -5,13 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/settings_notifications">
 
-    <org.mariotaku.twidere.preference.NotificationAccountsListPreference
+    <org.mariotaku.twidereAntiBot.preference.NotificationAccountsListPreference
         android:key="cat_accounts"
         android:title="@string/preference_title_accounts"
         app:switchDefault="true"
         app:switchKey="notification"/>
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="cat_general"
         android:title="@string/general">
 
@@ -27,6 +27,6 @@
             android:key="pebble_notifications"
             android:summary="@string/pebble_notifications_summary"
             android:title="@string/pebble_notifications"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
 </PreferenceScreen>

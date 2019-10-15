@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.util.stetho
+package org.mariotaku.twidereAntiBot.util.stetho
 
 import android.accounts.AccountManager
 import android.content.Context
@@ -37,13 +37,13 @@ import org.apache.commons.cli.*
 import org.json.JSONArray
 import org.json.JSONObject
 import org.mariotaku.ktextension.subArray
-import org.mariotaku.twidere.exception.NoAccountException
-import org.mariotaku.twidere.extension.model.updateDetails
-import org.mariotaku.twidere.model.AccountDetails
-import org.mariotaku.twidere.model.UserKey
-import org.mariotaku.twidere.model.util.AccountUtils
-import org.mariotaku.twidere.util.DataStoreUtils
-import org.mariotaku.twidere.util.JsonSerializer
+import org.mariotaku.twidereAntiBot.exception.NoAccountException
+import org.mariotaku.twidereAntiBot.extension.model.updateDetails
+import org.mariotaku.twidereAntiBot.model.AccountDetails
+import org.mariotaku.twidereAntiBot.model.UserKey
+import org.mariotaku.twidereAntiBot.model.util.AccountUtils
+import org.mariotaku.twidereAntiBot.util.DataStoreUtils
+import org.mariotaku.twidereAntiBot.util.JsonSerializer
 import java.io.InputStream
 import java.io.OutputStream
 import java.nio.ByteBuffer

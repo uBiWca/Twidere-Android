@@ -76,27 +76,27 @@
 -keep class * extends com.bumptech.glide.module.GlideModule
 
 # Essential components
--keep class * extends org.mariotaku.twidere.util.Analyzer
--keep class * extends org.mariotaku.twidere.util.MapFragmentFactory
--keep class * extends org.mariotaku.twidere.util.twitter.card.TwitterCardViewFactory
+-keep class * extends org.mariotaku.twidereAntiBot.util.Analyzer
+-keep class * extends org.mariotaku.twidereAntiBot.util.MapFragmentFactory
+-keep class * extends org.mariotaku.twidereAntiBot.util.twitter.card.TwitterCardViewFactory
 
 # Extra feature service
--keep class * extends org.mariotaku.twidere.util.premium.ExtraFeaturesService
--keep class * extends org.mariotaku.twidere.util.promotion.PromotionService
+-keep class * extends org.mariotaku.twidereAntiBot.util.premium.ExtraFeaturesService
+-keep class * extends org.mariotaku.twidereAntiBot.util.promotion.PromotionService
 
 # Extra feature component factories
--keep class * extends org.mariotaku.twidere.util.gifshare.GifShareProvider$Factory
--keep class * extends org.mariotaku.twidere.util.schedule.StatusScheduleProvider$Factory
--keep class * extends org.mariotaku.twidere.util.sync.DataSyncProvider$Factory
--keep class * extends org.mariotaku.twidere.util.sync.TimelineSyncManager$Factory
+-keep class * extends org.mariotaku.twidereAntiBot.util.gifshare.GifShareProvider$Factory
+-keep class * extends org.mariotaku.twidereAntiBot.util.schedule.StatusScheduleProvider$Factory
+-keep class * extends org.mariotaku.twidereAntiBot.util.sync.DataSyncProvider$Factory
+-keep class * extends org.mariotaku.twidereAntiBot.util.sync.TimelineSyncManager$Factory
 
 # View components
--keep class * extends org.mariotaku.twidere.util.view.AppBarChildBehavior$ChildTransformation
+-keep class * extends org.mariotaku.twidereAntiBot.util.view.AppBarChildBehavior$ChildTransformation
 
 -keepclassmembers class * {
     private <fields>;
 }
 
--keepclassmembers class org.mariotaku.twidere.activity.BrowserSignInActivity$InjectorJavaScriptInterface {
+-keepclassmembers class org.mariotaku.twidereAntiBot.activity.BrowserSignInActivity$InjectorJavaScriptInterface {
     public *;
 }

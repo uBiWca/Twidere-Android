@@ -38,7 +38,7 @@
             android:orientation="vertical"
             android:padding="8dp">
 
-            <org.mariotaku.twidere.view.FixedEditText
+            <org.mariotaku.twidereAntiBot.view.FixedEditText
                 android:id="@+id/editUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                 android:typeface="normal"
                 app:backgroundTint="?colorControlStateful"/>
 
-            <org.mariotaku.twidere.view.FixedEditText
+            <org.mariotaku.twidereAntiBot.view.FixedEditText
                 android:id="@+id/editPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

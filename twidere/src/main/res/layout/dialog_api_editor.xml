@@ -44,7 +44,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <org.mariotaku.twidere.view.FixedTextView
+            <org.mariotaku.twidereAntiBot.view.FixedTextView
                 android:id="@+id/labelApiUrlFormat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                 android:text="@string/api_url_format"
                 android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-            <org.mariotaku.twidere.view.IconActionView
+            <org.mariotaku.twidereAntiBot.view.IconActionView
                 android:id="@+id/apiUrlFormatHelp"
                 android:layout_width="@dimen/element_size_small"
                 android:layout_height="@dimen/element_size_small"
@@ -62,7 +62,7 @@
                 android:src="@drawable/ic_action_info"/>
         </LinearLayout>
 
-        <org.mariotaku.twidere.view.FixedEditText
+        <org.mariotaku.twidereAntiBot.view.FixedEditText
             android:id="@+id/editApiUrlFormat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
             app:backgroundTint="?colorControlStateful"
             tools:text="https://api.twitter.com/"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/labelAccountType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
             android:layout_marginTop="@dimen/element_spacing_normal"
             tools:listitem="@layout/support_simple_spinner_dropdown_item"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/labelAuthType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

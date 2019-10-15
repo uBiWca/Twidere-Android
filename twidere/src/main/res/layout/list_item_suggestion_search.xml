@@ -31,7 +31,7 @@
     android:paddingRight="@dimen/element_spacing_small"
     android:paddingTop="@dimen/element_spacing_xsmall">
 
-    <org.mariotaku.twidere.view.IconActionButton
+    <org.mariotaku.twidereAntiBot.view.IconActionButton
         android:id="@android:id/icon"
         android:layout_width="@dimen/element_size_quick_search_bar_item_icon"
         android:layout_height="@dimen/element_size_quick_search_bar_item_icon"
@@ -56,7 +56,7 @@
         android:paddingRight="0dp"
         android:paddingStart="@dimen/element_spacing_small">
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@android:id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
 
     </LinearLayout>
 
-    <org.mariotaku.twidere.view.IconActionButton
+    <org.mariotaku.twidereAntiBot.view.IconActionButton
         android:id="@+id/edit_query"
         android:layout_width="@dimen/element_size_normal"
         android:layout_height="@dimen/element_size_normal"

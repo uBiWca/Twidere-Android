@@ -13,13 +13,13 @@
         android:id="@id/retweet"
         android:icon="@drawable/ic_action_retweet"
         android:title="@string/action_retweet"
-        app:actionProviderClass="org.mariotaku.twidere.menu.RetweetItemProvider"
+        app:actionProviderClass="org.mariotaku.twidereAntiBot.menu.RetweetItemProvider"
         app:showAsAction="always"/>
     <item
         android:id="@id/favorite"
         android:icon="@drawable/ic_action_heart"
         android:title="@string/action_like"
-        app:actionProviderClass="org.mariotaku.twidere.menu.FavoriteItemProvider"
+        app:actionProviderClass="org.mariotaku.twidereAntiBot.menu.FavoriteItemProvider"
         app:showAsAction="always"/>
     <item
         android:id="@id/share"

@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.util;
+package org.mariotaku.twidereAntiBot.util;
 
 import android.app.Application;
 import android.os.Build;
@@ -29,10 +29,10 @@ import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
 import org.mariotaku.stethoext.bsh.BshRuntimeReplFactoryBuilder;
-import org.mariotaku.twidere.BuildConfig;
-import org.mariotaku.twidere.util.net.NoIntercept;
-import org.mariotaku.twidere.util.stetho.AccountsDumperPlugin;
-import org.mariotaku.twidere.util.stetho.UserStreamDumperPlugin;
+import org.mariotaku.twidereAntiBot.BuildConfig;
+import org.mariotaku.twidereAntiBot.util.net.NoIntercept;
+import org.mariotaku.twidereAntiBot.util.stetho.AccountsDumperPlugin;
+import org.mariotaku.twidereAntiBot.util.stetho.UserStreamDumperPlugin;
 
 import okhttp3.OkHttpClient;
 

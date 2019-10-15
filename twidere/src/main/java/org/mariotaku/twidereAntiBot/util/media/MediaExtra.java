@@ -1,0 +1,45 @@
+package org.mariotaku.twidereAntiBot.util.media;
+
+import org.mariotaku.twidereAntiBot.model.UserKey;
+
+/**
+ * Created by mariotaku on 16/1/28.
+ */
+public class MediaExtra {
+    private UserKey accountKey;
+    private boolean useThumbor = true;
+    private String fallbackUrl;
+    private boolean skipUrlReplacing;
+
+    public UserKey getAccountKey() {
+        return accountKey;
+    }
+
+    public void setAccountKey(UserKey accountKey) {
+        this.accountKey = accountKey;
+    }
+
+    public boolean isUseThumbor() {
+        return useThumbor;
+    }
+
+    public void setUseThumbor(boolean useThumbor) {
+        this.useThumbor = useThumbor;
+    }
+
+    public String getFallbackUrl() {
+        return fallbackUrl;
+    }
+
+    public void setFallbackUrl(String fallbackUrl) {
+        this.fallbackUrl = fallbackUrl;
+    }
+
+    public boolean isSkipUrlReplacing() {
+        return skipUrlReplacing;
+    }
+
+    public void setSkipUrlReplacing(boolean skipUrlReplacing) {
+        this.skipUrlReplacing = skipUrlReplacing;
+    }
+}

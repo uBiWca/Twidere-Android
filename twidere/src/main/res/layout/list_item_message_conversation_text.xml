@@ -26,7 +26,7 @@
     android:orientation="vertical"
     android:padding="@dimen/element_spacing_normal">
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <org.mariotaku.twidere.view.ProfileImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileImageView
             android:id="@+id/profileImage"
             android:layout_width="@dimen/profile_image_size_direct_message"
             android:layout_height="@dimen/profile_image_size_direct_message"
@@ -70,7 +70,7 @@
                 android:layout_below="@+id/mediaPreview"
                 android:padding="@dimen/element_spacing_normal">
 
-                <org.mariotaku.twidere.view.CardMediaContainer
+                <org.mariotaku.twidereAntiBot.view.CardMediaContainer
                     android:id="@+id/mediaPreview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -79,9 +79,9 @@
 
                     <include layout="@layout/layout_card_media_preview"/>
 
-                </org.mariotaku.twidere.view.CardMediaContainer>
+                </org.mariotaku.twidereAntiBot.view.CardMediaContainer>
 
-                <org.mariotaku.twidere.view.TimelineContentTextView
+                <org.mariotaku.twidereAntiBot.view.TimelineContentTextView
                     android:id="@+id/text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
             </RelativeLayout>
         </org.mariotaku.messagebubbleview.library.MessageBubbleView>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/nameTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -36,9 +36,9 @@ android {
     buildToolsVersion globalBuildToolsVersion
 
     defaultConfig {
-        applicationId "org.mariotaku.twidere"
+        applicationId "org.mariotaku.twidereAntiBot"
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 29
         versionCode projectVersionCode
         versionName projectVersionName
         multiDexEnabled true

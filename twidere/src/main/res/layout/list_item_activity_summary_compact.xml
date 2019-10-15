@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<org.mariotaku.twidere.view.ColorLabelRelativeLayout
+<org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +12,7 @@
     android:padding="@dimen/element_spacing_normal"
     app:ignorePadding="true">
 
-    <org.mariotaku.twidere.view.IconActionView
+    <org.mariotaku.twidereAntiBot.view.IconActionView
         android:id="@+id/activityType"
         android:layout_width="@dimen/element_size_small"
         android:layout_height="@dimen/element_size_small"
@@ -45,7 +45,7 @@
         android:orientation="horizontal"
         android:visibility="visible">
 
-        <org.mariotaku.twidere.view.ProfileImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileImageView
             android:id="@+id/activityProfileImage0"
             style="?profileImageStyle"
             android:layout_width="@dimen/profile_image_size_activity_small"
@@ -54,7 +54,7 @@
             android:contentDescription="@string/profile_image"
             tools:src="@drawable/ic_profile_image_twidere"/>
 
-        <org.mariotaku.twidere.view.ProfileImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileImageView
             android:id="@+id/activityProfileImage1"
             style="?profileImageStyle"
             android:layout_width="@dimen/profile_image_size_activity_small"
@@ -63,7 +63,7 @@
             android:contentDescription="@string/profile_image"
             tools:src="@mipmap/ic_launcher_hondajojo"/>
 
-        <org.mariotaku.twidere.view.ProfileImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileImageView
             android:id="@+id/activityProfileImage2"
             style="?profileImageStyle"
             android:layout_width="@dimen/profile_image_size_activity_small"
@@ -72,7 +72,7 @@
             android:contentDescription="@string/profile_image"
             tools:src="@drawable/ic_profile_image_twidere"/>
 
-        <org.mariotaku.twidere.view.ProfileImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileImageView
             android:id="@+id/activityProfileImage3"
             style="?profileImageStyle"
             android:layout_width="@dimen/profile_image_size_activity_small"
@@ -81,7 +81,7 @@
             android:contentDescription="@string/profile_image"
             tools:src="@mipmap/ic_launcher_hondajojo"/>
 
-        <org.mariotaku.twidere.view.ProfileImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileImageView
             android:id="@+id/activityProfileImage4"
             style="?profileImageStyle"
             android:layout_width="@dimen/profile_image_size_activity_small"
@@ -90,7 +90,7 @@
             android:contentDescription="@string/profile_image"
             tools:src="@drawable/ic_profile_image_twidere"/>
 
-        <org.mariotaku.twidere.view.BadgeView
+        <org.mariotaku.twidereAntiBot.view.BadgeView
             android:id="@+id/activityProfileImageMoreNumber"
             style="?profileImageStyle"
             android:layout_width="@dimen/profile_image_size_activity_small"
@@ -103,7 +103,7 @@
     </LinearLayout>
 
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
         android:textColor="?android:textColorPrimary"
         tools:text="User and 15 others favorited your tweet."/>
 
-    <org.mariotaku.twidere.view.ShortTimeView
+    <org.mariotaku.twidereAntiBot.view.ShortTimeView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"/>
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/summary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -140,4 +140,4 @@
         tools:text="@string/sample_status_text"
         tools:textSize="@dimen/text_size_extra_small"/>
 
-</org.mariotaku.twidere.view.ColorLabelRelativeLayout>
+</org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout>

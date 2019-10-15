@@ -10,7 +10,7 @@
     android:layout_marginTop="@dimen/element_spacing_small"
     app:cardBackgroundColor="?cardItemBackgroundColor">
 
-    <org.mariotaku.twidere.view.ContainerView
+    <org.mariotaku.twidereAntiBot.view.ContainerView
         android:id="@+id/containerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

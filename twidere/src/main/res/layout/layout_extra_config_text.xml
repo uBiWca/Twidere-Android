@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <org.mariotaku.twidere.view.FixedEditText
+    <org.mariotaku.twidereAntiBot.view.FixedEditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

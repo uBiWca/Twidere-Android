@@ -20,7 +20,7 @@
 
 
 <!-- Layout of a header item in PreferenceActivity. -->
-<org.mariotaku.twidere.view.FixedTextView
+<org.mariotaku.twidereAntiBot.view.FixedTextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/title"
     style="?android:listSeparatorTextViewStyle"

@@ -29,7 +29,7 @@ import org.mariotaku.microblog.library.twitter.model.User;
 import org.mariotaku.microblog.library.util.CRLFLineReader;
 import org.mariotaku.restfu.callback.RawCallback;
 import org.mariotaku.restfu.http.HttpResponse;
-import org.mariotaku.twidere.util.JsonSerializer;
+import org.mariotaku.twidereAntiBot.util.JsonSerializer;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

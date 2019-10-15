@@ -17,7 +17,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.TintedStatusFrameLayout
+<org.mariotaku.twidereAntiBot.view.TintedStatusFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top">
 
-        <org.mariotaku.twidere.view.ProfileBannerImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileBannerImageView
             android:id="@+id/profileBanner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,23 +50,23 @@
             android:layout="@layout/layout_user_profile_birthday_stub"/>
     </RelativeLayout>
 
-    <org.mariotaku.twidere.view.ExtendedRelativeLayout
+    <org.mariotaku.twidereAntiBot.view.ExtendedRelativeLayout
         android:id="@+id/profileContentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <org.mariotaku.twidere.view.ExtendedSwipeRefreshLayout
+        <org.mariotaku.twidereAntiBot.view.ExtendedSwipeRefreshLayout
             android:id="@+id/userProfileSwipeLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <org.mariotaku.twidere.view.HeaderDrawerLayout
+            <org.mariotaku.twidereAntiBot.view.HeaderDrawerLayout
                 android:id="@+id/userProfileDrawer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:hdl_contentLayout="@layout/fragment_content_pages"
                 app:hdl_headerLayout="@layout/header_user"/>
-        </org.mariotaku.twidere.view.ExtendedSwipeRefreshLayout>
+        </org.mariotaku.twidereAntiBot.view.ExtendedSwipeRefreshLayout>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -84,6 +84,6 @@
             android:layout_below="@+id/toolbar"
             android:background="?android:windowContentOverlay"/>
 
-    </org.mariotaku.twidere.view.ExtendedRelativeLayout>
+    </org.mariotaku.twidereAntiBot.view.ExtendedRelativeLayout>
 
-</org.mariotaku.twidere.view.TintedStatusFrameLayout>
+</org.mariotaku.twidereAntiBot.view.TintedStatusFrameLayout>

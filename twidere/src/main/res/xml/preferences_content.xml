@@ -6,7 +6,7 @@
     android:key="settings_content"
     android:title="@string/content_and_storage">
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="category_content"
         android:title="@string/content">
 
@@ -21,7 +21,7 @@
                 android:value="true"/>
         </SwitchPreferenceCompat>
 
-        <org.mariotaku.twidere.preference.SeekBarDialogPreference
+        <org.mariotaku.twidereAntiBot.preference.SeekBarDialogPreference
             android:defaultValue="20"
             android:key="load_item_limit"
             android:summary="@string/load_item_limit_summary"
@@ -47,15 +47,15 @@
             android:summary="@string/preference_summary_trends_location"
             android:title="@string/preference_title_trends_location"/>
 
-        <org.mariotaku.twidere.preference.ComponentStatePreference
-            android:name="org.mariotaku.twidere.activity.WebLinkHandlerActivity"
+        <org.mariotaku.twidereAntiBot.preference.ComponentStatePreference
+            android:name="org.mariotaku.twidereAntiBot.activity.WebLinkHandlerActivity"
             android:key="twitter_link_handler"
             android:title="@string/open_twitter_links"/>
         <Preference
-            android:fragment="org.mariotaku.twidere.fragment.KeyboardShortcutsFragment"
+            android:fragment="org.mariotaku.twidereAntiBot.fragment.KeyboardShortcutsFragment"
             android:title="@string/keyboard_shortcuts"/>
 
-        <org.mariotaku.twidere.preference.MediaUploaderPreference
+        <org.mariotaku.twidereAntiBot.preference.MediaUploaderPreference
             android:defaultValue=""
             android:key="media_uploader"
             android:summary="%s"
@@ -74,9 +74,9 @@
             android:summary="@string/preference_summary_chrome_custom_tab"
             android:title="@string/preference_title_chrome_custom_tab"/>
 
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="category_safety"
         android:title="@string/safety">
         <SwitchPreferenceCompat
@@ -89,11 +89,11 @@
             android:key="display_sensitive_contents"
             android:summary="@string/display_sensitive_contents_summary"
             android:title="@string/display_sensitive_contents"/>
-        <org.mariotaku.twidere.preference.RandomizeAccountNamePreference
+        <org.mariotaku.twidereAntiBot.preference.RandomizeAccountNamePreference
             android:defaultValue="false"
             android:key="randomize_account_name"
             android:summary="@string/preference_randomize_account_name_summary"
             android:title="@string/preference_randomize_account_name"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
 </PreferenceScreen>

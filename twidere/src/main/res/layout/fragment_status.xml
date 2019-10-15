@@ -32,14 +32,14 @@
         android:layout_gravity="bottom"
         android:visibility="gone">
 
-        <org.mariotaku.twidere.view.ExtendedRecyclerView
+        <org.mariotaku.twidereAntiBot.view.ExtendedRecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical">
 
             <requestFocus/>
-        </org.mariotaku.twidere.view.ExtendedRecyclerView>
+        </org.mariotaku.twidereAntiBot.view.ExtendedRecyclerView>
 
         <MultiAutoCompleteTextView
             android:layout_width="match_parent"

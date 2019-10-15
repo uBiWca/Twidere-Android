@@ -17,7 +17,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.HomeDrawerLayout
+<org.mariotaku.twidereAntiBot.view.HomeDrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/homeMenu"
@@ -32,10 +32,10 @@
 
     <fragment
         android:id="@+id/leftDrawer"
-        class="org.mariotaku.twidere.fragment.AccountsDashboardFragment"
+        class="org.mariotaku.twidereAntiBot.fragment.AccountsDashboardFragment"
         android:layout_width="@dimen/drawer_width_home"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         tools:layout="@layout/fragment_accounts_dashboard"/>
 
-</org.mariotaku.twidere.view.HomeDrawerLayout>
+</org.mariotaku.twidereAntiBot.view.HomeDrawerLayout>

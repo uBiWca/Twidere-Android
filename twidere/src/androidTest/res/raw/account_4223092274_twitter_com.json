@@ -1,7 +1,7 @@
 {
   "account": {
     "name": "TwidereTest@twitter.com",
-    "type": "org.mariotaku.twidere.account"
+    "type": "org.mariotaku.twidereAntiBot.account"
   },
   "activated": false,
   "color": "#F44336",

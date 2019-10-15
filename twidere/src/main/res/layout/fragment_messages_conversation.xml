@@ -17,7 +17,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.TintedStatusRelativeLayout
+<org.mariotaku.twidereAntiBot.view.TintedStatusRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -56,7 +56,7 @@
         android:padding="@dimen/element_spacing_normal"
         tools:ignore="UnusedAttribute">
 
-        <org.mariotaku.twidere.view.IconActionView
+        <org.mariotaku.twidereAntiBot.view.IconActionView
             android:id="@+id/addMedia"
             android:layout_width="@dimen/element_size_normal"
             android:layout_height="@dimen/element_size_normal"
@@ -81,7 +81,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true">
 
-            <org.mariotaku.twidere.view.IconActionView
+            <org.mariotaku.twidereAntiBot.view.IconActionView
                 android:id="@+id/sendMessage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -128,7 +128,7 @@
                 android:orientation="vertical"
                 android:padding="@dimen/element_spacing_normal">
 
-                <org.mariotaku.twidere.view.ComposeEditText
+                <org.mariotaku.twidereAntiBot.view.ComposeEditText
                     android:id="@+id/editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -145,9 +145,9 @@
                     android:textColorHint="?android:textColorTertiary">
 
                     <requestFocus/>
-                </org.mariotaku.twidere.view.ComposeEditText>
+                </org.mariotaku.twidereAntiBot.view.ComposeEditText>
 
-                <org.mariotaku.twidere.view.ExtendedRecyclerView
+                <org.mariotaku.twidereAntiBot.view.ExtendedRecyclerView
                     android:id="@+id/attachedMediaPreview"
                     android:layout_width="match_parent"
                     android:layout_height="104dp"
@@ -181,4 +181,4 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
         android:background="?android:windowContentOverlay"/>
-</org.mariotaku.twidere.view.TintedStatusRelativeLayout>
+</org.mariotaku.twidereAntiBot.view.TintedStatusRelativeLayout>

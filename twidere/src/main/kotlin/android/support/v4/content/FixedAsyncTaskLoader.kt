@@ -2,8 +2,8 @@ package android.support.v4.content
 
 import android.content.Context
 import android.os.AsyncTask
-import org.mariotaku.twidere.extension.set
-import org.mariotaku.twidere.util.Analyzer
+import org.mariotaku.twidereAntiBot.extension.set
+import org.mariotaku.twidereAntiBot.util.Analyzer
 
 /**
  * Created by mariotaku on 2017/2/7.

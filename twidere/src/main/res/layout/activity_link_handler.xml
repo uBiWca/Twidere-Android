@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<org.mariotaku.twidere.view.TintedStatusRelativeLayout
+<org.mariotaku.twidereAntiBot.view.TintedStatusRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/contentView"
@@ -26,4 +26,4 @@
         app:backgroundTint="?colorToolbar"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"/>
-</org.mariotaku.twidere.view.TintedStatusRelativeLayout>
+</org.mariotaku.twidereAntiBot.view.TintedStatusRelativeLayout>

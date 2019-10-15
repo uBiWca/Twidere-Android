@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.fragment
+package org.mariotaku.twidereAntiBot.fragment
 
 import android.content.Context
 import android.graphics.Point
@@ -27,11 +27,11 @@ import android.support.v4.content.res.ResourcesCompat
 import android.view.*
 import kotlinx.android.synthetic.fdroid.activity_osm_viewer.*
 import org.mariotaku.ktextension.preferExternalCacheDir
-import org.mariotaku.twidere.Constants
-import org.mariotaku.twidere.R
-import org.mariotaku.twidere.constant.IntentConstants.EXTRA_LATITUDE
-import org.mariotaku.twidere.constant.IntentConstants.EXTRA_LONGITUDE
-import org.mariotaku.twidere.util.DebugLog
+import org.mariotaku.twidereAntiBot.Constants
+import org.mariotaku.twidereAntiBot.R
+import org.mariotaku.twidereAntiBot.constant.IntentConstants.EXTRA_LATITUDE
+import org.mariotaku.twidereAntiBot.constant.IntentConstants.EXTRA_LONGITUDE
+import org.mariotaku.twidereAntiBot.util.DebugLog
 import org.osmdroid.api.IMapView
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory

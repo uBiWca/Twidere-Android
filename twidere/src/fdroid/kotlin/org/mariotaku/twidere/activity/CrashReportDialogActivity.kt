@@ -17,14 +17,14 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.activity
+package org.mariotaku.twidereAntiBot.activity
 
 import android.os.Bundle
 import android.support.v4.widget.TextViewCompat
 import android.view.View
 import android.widget.TextView
 import org.acra.dialog.CrashReportDialog
-import org.mariotaku.twidere.R
+import org.mariotaku.twidereAntiBot.R
 
 /**
  * Created by mariotaku on 2017/5/8.

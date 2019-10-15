@@ -17,12 +17,12 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.util
+package org.mariotaku.twidereAntiBot.util
 
 import android.content.Context
 import android.support.v4.app.Fragment
 
-import org.mariotaku.twidere.fragment.OpenStreetMapViewerFragment
+import org.mariotaku.twidereAntiBot.fragment.OpenStreetMapViewerFragment
 
 /**
  * Created by mariotaku on 15/4/27.

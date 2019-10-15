@@ -5,16 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/action_refresh">
 
-    <org.mariotaku.twidere.preference.AutoRefreshAccountsListPreference
+    <org.mariotaku.twidereAntiBot.preference.AutoRefreshAccountsListPreference
         android:key="cat_auto_refresh"
         android:title="@string/auto_refresh"
         app:switchDefault="true"
         app:switchKey="auto_refresh"/>
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="cat_general"
         android:title="@string/general">
-        <org.mariotaku.twidere.preference.RefreshIntervalPreference
+        <org.mariotaku.twidereAntiBot.preference.RefreshIntervalPreference
             android:defaultValue="15"
             android:entries="@array/entries_refresh_interval"
             android:entryValues="@array/values_refresh_interval"
@@ -38,7 +38,7 @@
                 android:value="true"/>
         </SwitchPreferenceCompat>
 
-        <org.mariotaku.twidere.preference.HomeRefreshContentPreference
+        <org.mariotaku.twidereAntiBot.preference.HomeRefreshContentPreference
             android:key="home_refresh"
             android:title="@string/home_refresh"/>
 
@@ -52,6 +52,6 @@
             android:key="refresh_after_tweet"
             android:summary="@string/refresh_after_status_updated_summary"
             android:title="@string/refresh_after_status_updated"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
 </PreferenceScreen>

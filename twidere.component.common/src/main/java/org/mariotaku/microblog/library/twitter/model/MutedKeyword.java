@@ -21,7 +21,7 @@ package org.mariotaku.microblog.library.twitter.model;
 import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
-import org.mariotaku.twidere.model.util.UnixEpochMillisDateConverter;
+import org.mariotaku.twidereAntiBot.model.util.UnixEpochMillisDateConverter;
 
 import java.util.Date;
 

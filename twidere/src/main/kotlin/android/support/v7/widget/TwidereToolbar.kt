@@ -26,9 +26,9 @@ import android.util.AttributeSet
 import android.view.Menu
 import android.view.View
 import android.widget.ImageView
-import org.mariotaku.twidere.extension.findFieldByTypes
-import org.mariotaku.twidere.extension.get
-import org.mariotaku.twidere.util.ThemeUtils
+import org.mariotaku.twidereAntiBot.extension.findFieldByTypes
+import org.mariotaku.twidereAntiBot.extension.get
+import org.mariotaku.twidereAntiBot.util.ThemeUtils
 
 /**
  * Created by mariotaku on 15/1/16.

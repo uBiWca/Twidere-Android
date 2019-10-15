@@ -21,7 +21,7 @@ package org.mariotaku.ktextension
 
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import org.mariotaku.twidere.model.CursorReference
+import org.mariotaku.twidereAntiBot.model.CursorReference
 
 fun SQLiteDatabase.queryReference(table: String, columns: Array<String>? = null,
         selection: String? = null, selectionArgs: Array<String>? = null, groupBy: String? = null,

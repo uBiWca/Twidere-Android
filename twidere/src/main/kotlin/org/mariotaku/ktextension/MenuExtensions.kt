@@ -28,7 +28,7 @@ import android.support.v4.view.MenuItemCompat
 import android.view.Menu
 import android.view.MenuItem
 import android.view.SubMenu
-import org.mariotaku.twidere.graphic.ActionIconDrawable
+import org.mariotaku.twidereAntiBot.graphic.ActionIconDrawable
 
 fun Menu.setItemAvailability(id: Int, available: Boolean) {
     val item = findItem(id) ?: return

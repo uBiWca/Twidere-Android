@@ -36,7 +36,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/element_spacing_normal">
 
-        <org.mariotaku.twidere.view.FixedEditText
+        <org.mariotaku.twidereAntiBot.view.FixedEditText
             android:id="@+id/editScreenName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             android:maxLines="1"
             app:backgroundTint="?colorControlStateful"/>
 
-        <org.mariotaku.twidere.view.IconActionButton
+        <org.mariotaku.twidereAntiBot.view.IconActionButton
             android:id="@+id/screenNameConfirm"
             android:layout_width="@dimen/minimum_element_size"
             android:layout_height="@dimen/minimum_element_size"

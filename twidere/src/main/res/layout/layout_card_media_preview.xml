@@ -24,7 +24,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/list_item_status">
 
-    <org.mariotaku.twidere.view.MediaPreviewImageView
+    <org.mariotaku.twidereAntiBot.view.MediaPreviewImageView
         android:id="@+id/mediaPreviewItem0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         tools:ignore="DuplicateIncludedIds"
         tools:src="@drawable/featured_graphics"/>
 
-    <org.mariotaku.twidere.view.MediaPreviewImageView
+    <org.mariotaku.twidereAntiBot.view.MediaPreviewImageView
         android:id="@+id/mediaPreviewItem1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         tools:ignore="DuplicateIncludedIds"
         tools:src="@drawable/featured_graphics"/>
 
-    <org.mariotaku.twidere.view.MediaPreviewImageView
+    <org.mariotaku.twidereAntiBot.view.MediaPreviewImageView
         android:id="@+id/mediaPreviewItem2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
         tools:ignore="DuplicateIncludedIds"
         tools:src="@drawable/featured_graphics"/>
 
-    <org.mariotaku.twidere.view.MediaPreviewImageView
+    <org.mariotaku.twidereAntiBot.view.MediaPreviewImageView
         android:id="@+id/mediaPreviewItem3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

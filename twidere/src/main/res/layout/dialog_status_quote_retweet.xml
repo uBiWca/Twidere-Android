@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <org.mariotaku.twidere.view.ComposeEditText
+            <org.mariotaku.twidereAntiBot.view.ComposeEditText
                 android:id="@+id/editComment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,9 +57,9 @@
                 app:backgroundTint="?colorControlStateful">
 
                 <requestFocus/>
-            </org.mariotaku.twidere.view.ComposeEditText>
+            </org.mariotaku.twidereAntiBot.view.ComposeEditText>
 
-            <org.mariotaku.twidere.view.StatusTextCountView
+            <org.mariotaku.twidereAntiBot.view.StatusTextCountView
                 android:id="@+id/commentTextCount"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/element_size_normal"

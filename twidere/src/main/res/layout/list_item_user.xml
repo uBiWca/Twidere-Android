@@ -17,7 +17,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.ColorLabelRelativeLayout
+<org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -45,7 +45,7 @@
         android:clipToPadding="false"
         tools:visibility="visible">
 
-        <org.mariotaku.twidere.view.ProfileImageView
+        <org.mariotaku.twidereAntiBot.view.ProfileImageView
             android:id="@+id/profileImage"
             style="?profileImageStyle"
             android:layout_width="@dimen/icon_size_card_list_item"
@@ -70,7 +70,7 @@
             tools:visibility="visible"/>
     </RelativeLayout>
 
-    <org.mariotaku.twidere.view.NameView
+    <org.mariotaku.twidereAntiBot.view.NameView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
             android:orientation="horizontal"
             tools:visibility="visible">
 
-            <org.mariotaku.twidere.view.IconActionButton
+            <org.mariotaku.twidereAntiBot.view.IconActionButton
                 android:id="@+id/unmute"
                 style="?buttonStyleSmall"
                 android:layout_width="@dimen/button_size_content_card"
@@ -115,7 +115,7 @@
                 app:backgroundTint="@color/material_grey"
                 app:iabColor="@android:color/transparent"/>
 
-            <org.mariotaku.twidere.view.IconActionButton
+            <org.mariotaku.twidereAntiBot.view.IconActionButton
                 android:id="@+id/follow"
                 style="?buttonStyleSmall"
                 android:layout_width="@dimen/button_size_content_card"
@@ -125,7 +125,7 @@
                 app:backgroundTint="@color/color_stateful_follow"
                 app:iabColor="@android:color/transparent"/>
 
-            <org.mariotaku.twidere.view.IconActionButton
+            <org.mariotaku.twidereAntiBot.view.IconActionButton
                 android:id="@+id/acceptRequest"
                 style="?buttonStyleSmall"
                 android:layout_width="@dimen/button_size_content_card"
@@ -135,7 +135,7 @@
                 app:backgroundTint="@color/material_light_green"
                 app:iabColor="@android:color/transparent"/>
 
-            <org.mariotaku.twidere.view.IconActionButton
+            <org.mariotaku.twidereAntiBot.view.IconActionButton
                 android:id="@+id/denyRequest"
                 style="?buttonStyleSmall"
                 android:layout_width="@dimen/button_size_content_card"
@@ -145,7 +145,7 @@
                 app:backgroundTint="@color/material_red"
                 app:iabColor="@android:color/transparent"/>
 
-            <org.mariotaku.twidere.view.IconActionButton
+            <org.mariotaku.twidereAntiBot.view.IconActionButton
                 android:id="@+id/unblock"
                 style="?buttonStyleSmall"
                 android:layout_width="@dimen/button_size_content_card"
@@ -166,7 +166,7 @@
 
     </FrameLayout>
 
-    <org.mariotaku.twidere.view.ActionIconThemedTextView
+    <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
         android:id="@+id/externalIndicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -179,7 +179,7 @@
         android:textStyle="italic"
         tools:text="External user at twitter.com"/>
 
-    <org.mariotaku.twidere.view.ActionIconThemedTextView
+    <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -191,7 +191,7 @@
         android:textColor="?android:attr/textColorSecondary"
         tools:text="@string/sample_status_text"/>
 
-    <org.mariotaku.twidere.view.ActionIconThemedTextView
+    <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
         android:id="@+id/location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         tools:text="Earth"/>
 
-    <org.mariotaku.twidere.view.ActionIconThemedTextView
+    <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
         android:id="@+id/url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -233,7 +233,7 @@
         android:orientation="horizontal"
         android:paddingTop="@dimen/element_spacing_small">
 
-        <org.mariotaku.twidere.view.ActionIconThemedTextView
+        <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
             android:id="@+id/statusesCount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -246,7 +246,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             tools:text="255"/>
 
-        <org.mariotaku.twidere.view.ActionIconThemedTextView
+        <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
             android:id="@+id/followersCount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -259,7 +259,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             tools:text="255"/>
 
-        <org.mariotaku.twidere.view.ActionIconThemedTextView
+        <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
             android:id="@+id/friendsCount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -273,4 +273,4 @@
             tools:text="255"/>
     </LinearLayout>
 
-</org.mariotaku.twidere.view.ColorLabelRelativeLayout>
+</org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout>

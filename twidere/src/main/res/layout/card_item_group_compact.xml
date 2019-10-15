@@ -17,7 +17,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.ColorLabelRelativeLayout
+<org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -29,7 +29,7 @@
     app:ignorePadding="true"
     tools:context=".adapter.ParcelableUsersAdapter">
 
-    <org.mariotaku.twidere.view.ProfileImageView
+    <org.mariotaku.twidereAntiBot.view.ProfileImageView
         android:id="@+id/profileImage"
         style="?profileImageStyle"
         android:layout_width="@dimen/icon_size_card_list_item"
@@ -45,7 +45,7 @@
         tools:src="@drawable/ic_profile_image_twidere"/>
 
 
-    <org.mariotaku.twidere.view.NameView
+    <org.mariotaku.twidereAntiBot.view.NameView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
         app:nv_twoLine="false"/>
 
 
-    <org.mariotaku.twidere.view.ActionIconThemedTextView
+    <org.mariotaku.twidereAntiBot.view.ActionIconThemedTextView
         android:id="@+id/externalIndicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
         android:textStyle="italic"
         tools:text="External group at gnu.io"/>
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
         android:orientation="horizontal"
         android:paddingTop="@dimen/element_spacing_small">
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/membersCount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             tools:text="255"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/adminsCount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -121,4 +121,4 @@
             tools:text="255"/>
     </LinearLayout>
 
-</org.mariotaku.twidere.view.ColorLabelRelativeLayout>
+</org.mariotaku.twidereAntiBot.view.ColorLabelRelativeLayout>

@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/element_spacing_normal">
 
-    <org.mariotaku.twidere.view.FixedEditText
+    <org.mariotaku.twidereAntiBot.view.FixedEditText
         android:id="@+id/editName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

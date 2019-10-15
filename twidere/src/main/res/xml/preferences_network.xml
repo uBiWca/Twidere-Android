@@ -22,7 +22,7 @@
         android:title="@string/bandwidth_saving_mode"/>
 
     <Preference
-        android:fragment="org.mariotaku.twidere.fragment.SettingsDetailsFragment"
+        android:fragment="org.mariotaku.twidereAntiBot.fragment.SettingsDetailsFragment"
         android:title="@string/preference_title_advanced">
         <extra
             android:name="resid"

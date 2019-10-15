@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/theme">
 
-    <org.mariotaku.twidere.preference.EntrySummaryListPreference
+    <org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference
         android:defaultValue="light"
         android:entries="@array/entries_theme"
         android:entryValues="@array/values_theme"
@@ -18,9 +18,9 @@
         <extra
             android:name="recreate_activity"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.EntrySummaryListPreference>
+    </org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference>
 
-    <org.mariotaku.twidere.preference.ThemeBackgroundPreference
+    <org.mariotaku.twidereAntiBot.preference.ThemeBackgroundPreference
         android:defaultValue="default"
         android:order="22"
         android:title="@string/background">
@@ -30,9 +30,9 @@
         <extra
             android:name="recreate_activity"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.ThemeBackgroundPreference>
+    </org.mariotaku.twidereAntiBot.preference.ThemeBackgroundPreference>
 
-    <org.mariotaku.twidere.preference.ColorPickerPreference
+    <org.mariotaku.twidereAntiBot.preference.ColorPickerPreference
         android:key="theme_color"
         android:order="23"
         android:title="@string/color"
@@ -43,9 +43,9 @@
         <extra
             android:name="recreate_activity"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.ColorPickerPreference>
+    </org.mariotaku.twidereAntiBot.preference.ColorPickerPreference>
 
-    <org.mariotaku.twidere.preference.EntrySummaryListPreference
+    <org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference
         android:entries="@array/entries_navbar_style"
         android:entryValues="@array/values_navbar_style"
         android:key="navbar_style"
@@ -57,15 +57,15 @@
         <extra
             android:name="recreate_activity"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.EntrySummaryListPreference>
+    </org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference>
 
-    <org.mariotaku.twidere.preference.EmojiSupportPreference
+    <org.mariotaku.twidereAntiBot.preference.EmojiSupportPreference
         android:key="emoji_support"
         android:order="25"
         android:title="@string/emoji_support">
         <extra
             android:name="should_recreate"
             android:value="true"/>
-    </org.mariotaku.twidere.preference.EmojiSupportPreference>
+    </org.mariotaku.twidereAntiBot.preference.EmojiSupportPreference>
 
 </PreferenceScreen>

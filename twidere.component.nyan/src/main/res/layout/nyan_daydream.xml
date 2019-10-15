@@ -18,7 +18,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.nyan.NyanDaydreamView
+<org.mariotaku.twidereAntiBot.nyan.NyanDaydreamView
     android:id="@+id/nyan"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

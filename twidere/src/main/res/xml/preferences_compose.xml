@@ -43,12 +43,12 @@
         android:summary="@string/no_close_after_status_updated_summary"
         android:title="@string/no_close_after_status_updated"/>
 
-    <org.mariotaku.twidere.preference.ComposeNowPreference
+    <org.mariotaku.twidereAntiBot.preference.ComposeNowPreference
         android:key="compose_now"
         android:summary="@string/compose_now_summary"
         android:title="@string/compose_now"/>
 
-    <org.mariotaku.twidere.preference.EntrySummaryListPreference
+    <org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference
         android:defaultValue="compose"
         android:dependency="compose_now"
         android:entries="@array/entries_compose_now_action"
@@ -56,13 +56,13 @@
         android:key="compose_now_action"
         android:title="@string/compose_now_action"/>
 
-    <org.mariotaku.twidere.preference.StatusShortenerPreference
+    <org.mariotaku.twidereAntiBot.preference.StatusShortenerPreference
         android:defaultValue=""
         android:key="status_shortener"
         android:summary="%s"
         android:title="@string/status_shortener"/>
 
-    <org.mariotaku.twidere.preference.ThemedEditTextPreference
+    <org.mariotaku.twidereAntiBot.preference.ThemedEditTextPreference
         android:defaultValue="RT @[NAME]: [TEXT]"
         android:dialogTitle="@string/quote_format"
         android:key="quote_format"

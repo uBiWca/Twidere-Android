@@ -1,0 +1,81 @@
+/*
+ *             Twidere - Twitter client for Android
+ *
+ *  Copyright (C) 2012-2017 Mariotaku Lee <mariotaku.lee@gmail.com>
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package org.mariotaku.twidereAntiBot.loader.users
+
+import android.content.Context
+import org.mariotaku.microblog.library.MicroBlog
+import org.mariotaku.microblog.library.MicroBlogException
+import org.mariotaku.microblog.library.mastodon.Mastodon
+import org.mariotaku.microblog.library.twitter.model.Paging
+import org.mariotaku.twidereAntiBot.annotation.AccountType
+import org.mariotaku.twidereAntiBot.annotation.FilterScope
+import org.mariotaku.twidereAntiBot.extension.model.api.mastodon.mapToPaginated
+import org.mariotaku.twidereAntiBot.extension.model.api.mastodon.toParcelable
+import org.mariotaku.twidereAntiBot.extension.model.api.microblog.mapToPaginated
+import org.mariotaku.twidereAntiBot.extension.model.api.toParcelable
+import org.mariotaku.twidereAntiBot.extension.model.newMicroBlogInstance
+import org.mariotaku.twidereAntiBot.model.AccountDetails
+import org.mariotaku.twidereAntiBot.model.ParcelableUser
+import org.mariotaku.twidereAntiBot.model.UserKey
+import org.mariotaku.twidereAntiBot.model.pagination.PaginatedList
+import org.mariotaku.twidereAntiBot.util.DataStoreUtils
+
+class UserBlocksLoader(
+        context: Context,
+        accountKey: UserKey?,
+        data: List<ParcelableUser>?,
+        fromUser: Boolean
+) : AbsRequestUsersLoader(context, accountKey, data, fromUser) {
+
+    private var filteredUsers: Array<UserKey>? = null
+
+    @Throws(MicroBlogException::class)
+    override fun getUsers(details: AccountDetails, paging: Paging): PaginatedList<ParcelableUser> {
+        when (details.type) {
+            AccountType.MASTODON -> {
+                val mastodon = details.newMicroBlogInstance(context, Mastodon::class.java)
+                return mastodon.getBlocks(paging).mapToPaginated {
+                    it.toParcelable(details)
+                }
+            }
+            AccountType.FANFOU -> {
+                val microBlog = details.newMicroBlogInstance(context, MicroBlog::class.java)
+                return microBlog.getFanfouBlocking(paging).mapToPaginated(pagination) {
+                    it.toParcelable(details, profileImageSize = profileImageSize)
+                }
+            }
+            else -> {
+                val microBlog = details.newMicroBlogInstance(context, MicroBlog::class.java)
+                return microBlog.getBlocksList(paging).mapToPaginated {
+                    it.toParcelable(details, profileImageSize = profileImageSize)
+                }
+            }
+        }
+    }
+
+    override fun onLoadInBackground(): List<ParcelableUser> {
+        filteredUsers = DataStoreUtils.getFilteredUserKeys(context, FilterScope.ALL)
+        return super.onLoadInBackground()
+    }
+
+    override fun processUser(details: AccountDetails, user: ParcelableUser) {
+        user.is_filtered = filteredUsers?.contains(user.key) ?: false
+    }
+}

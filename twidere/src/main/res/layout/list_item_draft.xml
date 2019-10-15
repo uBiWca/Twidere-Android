@@ -17,7 +17,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.ColorLabelLinearLayout
+<org.mariotaku.twidereAntiBot.view.ColorLabelLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -34,7 +34,7 @@
     app:ignorePadding="true"
     tools:context=".adapter.DraftsAdapter">
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         android:textColor="?android:textColorPrimary"
         tools:text="@string/sample_status_text"/>
 
-    <org.mariotaku.twidere.view.CardMediaContainer
+    <org.mariotaku.twidereAntiBot.view.CardMediaContainer
         android:id="@+id/mediaPreviewContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,9 +55,9 @@
 
         <include layout="@layout/layout_card_media_preview"/>
 
-    </org.mariotaku.twidere.view.CardMediaContainer>
+    </org.mariotaku.twidereAntiBot.view.CardMediaContainer>
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,4 +85,4 @@
             android:layout_height="wrap_content"
             android:text="@string/action_send"/>
     </LinearLayout>
-</org.mariotaku.twidere.view.ColorLabelLinearLayout>
+</org.mariotaku.twidereAntiBot.view.ColorLabelLinearLayout>

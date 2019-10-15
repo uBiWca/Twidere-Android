@@ -27,7 +27,7 @@
     android:orientation="vertical"
     tools:layout_height="@dimen/element_size_normal">
 
-    <org.mariotaku.twidere.view.FixedTextView
+    <org.mariotaku.twidereAntiBot.view.FixedTextView
         android:id="@+id/editQuery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

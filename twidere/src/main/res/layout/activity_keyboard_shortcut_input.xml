@@ -36,14 +36,14 @@
         android:orientation="vertical"
         android:padding="@dimen/element_spacing_xlarge">
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/keysLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/keyboard_shortcut_hint"
             android:textAppearance="?android:textAppearanceMedium"/>
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:id="@+id/conflictLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

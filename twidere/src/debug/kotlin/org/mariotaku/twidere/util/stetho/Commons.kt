@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.util.stetho
+package org.mariotaku.twidereAntiBot.util.stetho
 
 import org.apache.commons.cli.HelpFormatter
 import org.apache.commons.cli.Option

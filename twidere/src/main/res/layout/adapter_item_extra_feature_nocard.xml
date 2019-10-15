@@ -18,7 +18,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.ContainerView
+<org.mariotaku.twidereAntiBot.view.ContainerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/containerView"
     android:layout_width="match_parent"

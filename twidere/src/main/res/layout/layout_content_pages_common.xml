@@ -30,13 +30,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <org.mariotaku.twidere.view.ExtendedViewPager
+        <org.mariotaku.twidereAntiBot.view.ExtendedViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/toolbarTabs"/>
 
-        <org.mariotaku.twidere.view.TabPagerIndicator
+        <org.mariotaku.twidereAntiBot.view.TabPagerIndicator
             android:id="@+id/toolbarTabs"
             android:layout_width="match_parent"
             android:layout_height="@dimen/element_size_normal"
@@ -71,14 +71,14 @@
             android:orientation="vertical"
             android:padding="@dimen/element_spacing_large">
 
-            <org.mariotaku.twidere.view.IconActionView
+            <org.mariotaku.twidereAntiBot.view.IconActionView
                 android:id="@+id/pagesErrorIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:color="?android:textColorSecondary"
                 android:src="@drawable/ic_info_error_generic"/>
 
-            <org.mariotaku.twidere.view.FixedTextView
+            <org.mariotaku.twidereAntiBot.view.FixedTextView
                 android:id="@+id/pagesErrorText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

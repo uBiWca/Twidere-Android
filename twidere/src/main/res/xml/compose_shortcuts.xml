@@ -10,9 +10,9 @@
         android:shortcutLongLabel="@string/action_compose"
         android:shortcutShortLabel="@string/action_compose">
         <intent
-            android:action="org.mariotaku.twidere.COMPOSE"
-            android:targetClass="org.mariotaku.twidere.activity.ComposeActivity"
-            android:targetPackage="org.mariotaku.twidere"/>
+            android:action="org.mariotaku.twidereAntiBot.COMPOSE"
+            android:targetClass="org.mariotaku.twidereAntiBot.activity.ComposeActivity"
+            android:targetPackage="org.mariotaku.twidereAntiBot"/>
     </shortcut>
     <shortcut
         android:enabled="true"
@@ -21,9 +21,9 @@
         android:shortcutLongLabel="@string/action_take_photo"
         android:shortcutShortLabel="@string/action_take_photo">
         <intent
-            android:action="org.mariotaku.twidere.COMPOSE_TAKE_PHOTO"
-            android:targetClass="org.mariotaku.twidere.activity.ComposeActivity"
-            android:targetPackage="org.mariotaku.twidere"/>
+            android:action="org.mariotaku.twidereAntiBot.COMPOSE_TAKE_PHOTO"
+            android:targetClass="org.mariotaku.twidereAntiBot.activity.ComposeActivity"
+            android:targetPackage="org.mariotaku.twidereAntiBot"/>
     </shortcut>
     <!-- Specify more shortcuts here. -->
 </shortcuts>

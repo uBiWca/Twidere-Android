@@ -22,7 +22,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/title_streaming">
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:title="@string/preference_title_streaming_content">
 
         <SwitchPreferenceCompat
@@ -42,5 +42,5 @@
             android:key="stream_notification_users"
             android:summary="@string/stream_summary_notification_users"
             android:title="@string/stream_type_notification_users"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 </PreferenceScreen>

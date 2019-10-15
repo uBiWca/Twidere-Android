@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/preference_title_advanced">
 
-    <org.mariotaku.twidere.preference.DefaultAPIPreference
+    <org.mariotaku.twidereAntiBot.preference.DefaultAPIPreference
         android:key="default_api"
         android:summary="@string/default_api_settings_summary"
         android:title="@string/default_api_settings"/>
@@ -21,7 +21,7 @@
         android:summary="@string/tcp_dns_query_summary"
         android:title="@string/tcp_dns_query"/>
 
-    <org.mariotaku.twidere.preference.ThemedEditTextPreference
+    <org.mariotaku.twidereAntiBot.preference.ThemedEditTextPreference
         android:dependency="builtin_dns_resolver"
         android:dialogTitle="@string/dns_server"
         android:inputType="textVisiblePassword"
@@ -31,12 +31,12 @@
         android:title="@string/dns_server"/>
 
     <Preference
-        android:fragment="org.mariotaku.twidere.fragment.HostMappingsListFragment"
+        android:fragment="org.mariotaku.twidereAntiBot.fragment.HostMappingsListFragment"
         android:key="custom_host_mapping"
         android:summary="@string/custom_host_mapping_summary"
         android:title="@string/custom_host_mapping"/>
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="category_proxy"
         android:title="@string/proxy">
         <SwitchPreferenceCompat
@@ -46,39 +46,39 @@
             android:summary="@string/proxy_summary"
             android:title="@string/proxy"/>
 
-        <org.mariotaku.twidere.preference.EntrySummaryListPreference
+        <org.mariotaku.twidereAntiBot.preference.EntrySummaryListPreference
             android:defaultValue="http"
             android:dependency="enable_proxy"
             android:entries="@array/entries_proxy_type"
             android:entryValues="@array/values_proxy_type"
             android:key="proxy_type"
             android:title="@string/proxy_type"/>
-        <org.mariotaku.twidere.preference.ThemedEditTextPreference
+        <org.mariotaku.twidereAntiBot.preference.ThemedEditTextPreference
             android:dependency="enable_proxy"
             android:key="proxy_host"
             android:singleLine="true"
             android:title="@string/proxy_host"/>
-        <org.mariotaku.twidere.preference.ThemedEditTextPreference
+        <org.mariotaku.twidereAntiBot.preference.ThemedEditTextPreference
             android:dependency="enable_proxy"
             android:inputType="number"
             android:key="proxy_port"
             android:singleLine="true"
             android:title="@string/proxy_port"/>
-        <org.mariotaku.twidere.preference.ThemedEditTextPreference
+        <org.mariotaku.twidereAntiBot.preference.ThemedEditTextPreference
             android:dependency="enable_proxy"
             android:inputType="textEmailAddress"
             android:key="proxy_username"
             android:singleLine="true"
             android:title="@string/proxy_username"/>
-        <org.mariotaku.twidere.preference.ThemedEditTextPreference
+        <org.mariotaku.twidereAntiBot.preference.ThemedEditTextPreference
             android:dependency="enable_proxy"
             android:inputType="textPassword"
             android:key="proxy_password"
             android:singleLine="true"
             android:title="@string/proxy_password"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
-    <org.mariotaku.twidere.preference.TintedPreferenceCategory
+    <org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory
         android:key="category_tumbor"
         android:title="@string/thumbor_integration">
 
@@ -87,17 +87,17 @@
             android:key="thumbor_enabled"
             android:title="@string/thumbor_integration"/>
 
-        <org.mariotaku.twidere.preference.ThemedEditTextPreference
+        <org.mariotaku.twidereAntiBot.preference.ThemedEditTextPreference
             android:dependency="thumbor_enabled"
             android:inputType="textUri"
             android:key="thumbor_address"
             android:title="@string/server_address"/>
 
-        <org.mariotaku.twidere.preference.ThemedEditTextPreference
+        <org.mariotaku.twidereAntiBot.preference.ThemedEditTextPreference
             android:dependency="thumbor_enabled"
             android:inputType="textVisiblePassword"
             android:key="thumbor_security_key"
             android:title="@string/security_key"/>
-    </org.mariotaku.twidere.preference.TintedPreferenceCategory>
+    </org.mariotaku.twidereAntiBot.preference.TintedPreferenceCategory>
 
 </PreferenceScreen>

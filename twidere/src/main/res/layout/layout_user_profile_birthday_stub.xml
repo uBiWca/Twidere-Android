@@ -24,7 +24,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <org.mariotaku.twidere.view.BirthdayView
+    <org.mariotaku.twidereAntiBot.view.BirthdayView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </FrameLayout>

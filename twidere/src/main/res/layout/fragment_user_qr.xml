@@ -18,7 +18,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.SquareRelativeLayout
+<org.mariotaku.twidereAntiBot.view.SquareRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -45,4 +45,4 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
 
-</org.mariotaku.twidere.view.SquareRelativeLayout>
+</org.mariotaku.twidereAntiBot.view.SquareRelativeLayout>

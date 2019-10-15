@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.mariotaku.twidere.util
+package org.mariotaku.twidereAntiBot.util
 
 import android.accounts.Account
 import android.accounts.AccountManager
@@ -31,14 +31,14 @@ import org.acra.ReportingInteractionMode
 import org.acra.config.ConfigurationBuilder
 import org.mariotaku.kpreferences.get
 import org.mariotaku.ktextension.addOnAccountsUpdatedListenerSafe
-import org.mariotaku.twidere.BuildConfig
-import org.mariotaku.twidere.R
-import org.mariotaku.twidere.TwidereConstants.ACCOUNT_TYPE
-import org.mariotaku.twidere.TwidereConstants.TWIDERE_PROJECT_EMAIL
-import org.mariotaku.twidere.activity.CrashReportDialogActivity
-import org.mariotaku.twidere.constant.themeBackgroundAlphaKey
-import org.mariotaku.twidere.constant.themeBackgroundOptionKey
-import org.mariotaku.twidere.constant.themeKey
+import org.mariotaku.twidereAntiBot.BuildConfig
+import org.mariotaku.twidereAntiBot.R
+import org.mariotaku.twidereAntiBot.TwidereConstants.ACCOUNT_TYPE
+import org.mariotaku.twidereAntiBot.TwidereConstants.TWIDERE_PROJECT_EMAIL
+import org.mariotaku.twidereAntiBot.activity.CrashReportDialogActivity
+import org.mariotaku.twidereAntiBot.constant.themeBackgroundAlphaKey
+import org.mariotaku.twidereAntiBot.constant.themeBackgroundOptionKey
+import org.mariotaku.twidereAntiBot.constant.themeKey
 
 /**
  * Created by mariotaku on 2017/5/8.

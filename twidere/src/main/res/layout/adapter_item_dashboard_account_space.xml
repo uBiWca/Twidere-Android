@@ -25,7 +25,7 @@
     android:padding="@dimen/element_spacing_small"
     tools:layout_height="48dp">
 
-    <org.mariotaku.twidere.view.SquareSpace
+    <org.mariotaku.twidereAntiBot.view.SquareSpace
         android:id="@android:id/icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

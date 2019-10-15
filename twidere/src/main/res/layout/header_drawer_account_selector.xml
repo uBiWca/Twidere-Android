@@ -17,7 +17,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<org.mariotaku.twidere.view.AccountDashboardHeaderView
+<org.mariotaku.twidereAntiBot.view.AccountDashboardHeaderView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -54,7 +54,7 @@
             android:paddingBottom="@dimen/element_spacing_normal"
             android:paddingTop="@dimen/element_spacing_normal">
 
-            <org.mariotaku.twidere.view.ProfileImageView
+            <org.mariotaku.twidereAntiBot.view.ProfileImageView
                 android:id="@+id/profileImage"
                 style="?profileImageStyle"
                 android:layout_width="@dimen/icon_size_profile_image_dashboard_current"
@@ -68,7 +68,7 @@
                 app:sivBorderWidth="2dp"
                 tools:src="@drawable/ic_profile_image_twidere"/>
 
-            <org.mariotaku.twidere.view.ExtendedViewPager
+            <org.mariotaku.twidereAntiBot.view.ExtendedViewPager
                 android:id="@+id/otherAccountsList"
                 android:layout_width="wrap_content"
                 android:layout_height="52dp"
@@ -132,7 +132,7 @@
                     android:focusable="false"
                     android:orientation="vertical">
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
                         android:textStyle="bold"
                         tools:text="Name"/>
 
-                    <org.mariotaku.twidere.view.FixedTextView
+                    <org.mariotaku.twidereAntiBot.view.FixedTextView
                         android:id="@+id/screenName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -174,7 +174,7 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <org.mariotaku.twidere.view.ShapedImageView
+        <org.mariotaku.twidereAntiBot.view.ShapedImageView
             android:id="@+id/floatingProfileImageSnapshot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -194,7 +194,7 @@
         android:focusable="true"
         tools:visibility="gone">
 
-        <org.mariotaku.twidere.view.FixedTextView
+        <org.mariotaku.twidereAntiBot.view.FixedTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -202,4 +202,4 @@
 
     </FrameLayout>
 
-</org.mariotaku.twidere.view.AccountDashboardHeaderView>
+</org.mariotaku.twidereAntiBot.view.AccountDashboardHeaderView>
