@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "592207078354",
+    "firebase_url": "https://twiderantibot.firebaseio.com",
+    "project_id": "twiderantibot",
+    "storage_bucket": "twiderantibot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592207078354:android:47cff3e96c2f0313",
+        "android_client_info": {
+          "package_name": "org.mariotaku.twidereAntiBot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592207078354-28cnt05r6d9v8fbgrqc4b99g40uumlim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIqct2zmGpTTrp-aBVZgiTRkTIDTSGhtg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
