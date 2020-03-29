@@ -1,6 +1,6 @@
 # TwidereAntiBot for Android #
 
-
+Thank you for your interest of Twidere! Just let you know twidere is back and now maintained by community - we would like to have as many contributor as possible -;)
 
 Твиттер-клиент для Android 4.0+ c подсветкой т.н. "кремлеботов"
 
